@@ -1,0 +1,59 @@
+2025-08-17 00:45:06 ---> Error: Fallo al intentar leer el log de actividades por el admin:Noel en fecha:17/8/2025 12:45:06 a. m.
+2025-08-17 01:06:26 [INFO] - El usuario Noel se autentico correctamente a las 1:06 a. m. el dia 17/8/2025
+2025-08-17 01:06:59 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 1:06:59 a. m.
+2025-08-17 01:07:34 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 1:07:34 a. m.
+2025-08-17 01:07:50 [ERROR] - Fallo al consultar reserva por usuario Noel no tenía cita
+2025-08-17 01:07:50 [ERROR] - Error al obtener la cita de Noel: No tiene cita reservada
+2025-08-17 01:07:57 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 1:07:57 a. m.
+2025-08-17 01:09:53 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/8/2025
+2025-08-17 01:11:18 [INFO] - El usuario Nagui se autentico correctamente a las 1:11 a. m. el dia 17/8/2025
+2025-08-17 01:11:42 [ERROR] - Fallo a crear configuracion por el admin:Noel, no indico la duracion de la cita
+2025-08-17 01:12:26 [ERROR] - Fallo a crear configuracion por el admin:Nagui, no indico la duracion de la cita
+2025-08-17 01:13:06 [INFO] - configuracion consultada correctamente por admin:Nagui turno:Matutino fecha:17/8/2025
+2025-08-17 01:13:53 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:14:07 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:17:10 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:19:35 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:21:58 [INFO] - El usuario Nagui se autentico correctamente a las 1:21 a. m. el dia 17/8/2025
+2025-08-17 01:22:46 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:24:08 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:26:10 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:26:13 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:26:58 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:29:12 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:29:40 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
+2025-08-17 01:32:44 [INFO] - El usuario Noel se autentico correctamente a las 1:32 a. m. el dia 17/8/2025
+2025-08-17 01:33:12 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 01:34:06 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 01:34:34 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 01:35:10 [ERROR] - Fallo al consultar una configuracion el admin:Noel no indico unt turno correcto
+2025-08-17 01:36:05 [INFO] - El usuario Noel se autentico correctamente a las 1:36 a. m. el dia 17/8/2025
+2025-08-17 01:36:30 [ERROR] - Fallo a crear configuracion por el admin:Noel, no indico la duracion de la cita
+2025-08-17 01:37:33 [ERROR] - Fallo al crear configuracion el admin:Noel no indico valores correcto para el horario vesrpertino
+2025-08-17 01:37:56 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 01:38:04 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 01:39:46 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 02:11:58 [INFO] - El usuario Noel se autentico correctamente a las 2:11 a. m. el dia 17/8/2025
+2025-08-17 02:20:10 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 02:20:46 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/8/2025
+2025-08-17 02:49:21 [INFO] - El usuario Nagui se autentico correctamente a las 2:49 a. m. el dia 17/8/2025
+2025-08-17 02:50:38 [INFO] - Correo enviado sastifactoriamente a 'noel@gmail.com' despues de reservar su cita
+2025-08-17 02:50:40 [INFO] - Usuario Noel reservó una cita para 17/8/2025 (turno:Matutino)
+2025-08-17 02:51:58 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 2:51:58 a. m.
+2025-08-17 02:52:24 [INFO] - El usuario Nagui se autentico correctamente a las 2:52 a. m. el dia 17/8/2025
+2025-08-17 02:52:29 [INFO] - El usuario Nagui se autentico correctamente a las 2:52 a. m. el dia 17/8/2025
+2025-08-17 02:52:37 [ERROR] - Hubo un error al registrar una reserva por Noel para 17/8/2025
+2025-08-17 02:53:13 [INFO] - El usuario Nagui se autentico correctamente a las 2:53 a. m. el dia 17/8/2025
+2025-08-17 02:53:19 [INFO] - Correo enviado sastifactoriamente a 'Nagui@gmail.com' despues de reservar su cita
+2025-08-17 02:53:20 [INFO] - Usuario Nagui reservó una cita para 17/8/2025 (turno:Matutino)
+2025-08-17 02:53:46 [INFO] - Admin 'Nagui' consultó el log a 17/8/2025 2:53:46 a. m.
+2025-08-17 02:53:59 [INFO] - El usuario Nagui consultó su cita en fecha: 17/8/2025 2:53:59 a. m.
+2025-08-17 02:59:34 [INFO] - El usuario Gregory se registro correctamente fecha:17/8/2025 2:59:34 a. m.
+2025-08-17 03:00:30 [INFO] - El usuario Gregory se autentico correctamente a las 3:00 a. m. el dia 17/8/2025
+2025-08-17 03:00:40 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/8/2025
+2025-08-17 03:00:52 [INFO] - Correo enviado sastifactoriamente a 'gregory@gmail.com' despues de reservar su cita
+2025-08-17 03:00:54 [INFO] - Usuario Gregory reservó una cita para 17/8/2025 (turno:Matutino)
+2025-08-17 03:07:21 [INFO] - El usuario jose se registro correctamente fecha:17/8/2025 3:07:21 a. m.
+2025-08-17 03:08:00 [INFO] - El usuario jose se autentico correctamente a las 3:08 a. m. el dia 17/8/2025
+2025-08-17 03:08:13 [INFO] - Correo enviado sastifactoriamente a 'jose@gmail.com' despues de reservar su cita
+2025-08-17 03:08:15 [INFO] - Usuario jose reservó una cita para 17/8/2025 (turno:Matutino)
