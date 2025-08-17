@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Aplicacion.Configuraciones;
 using Aplicacion.DTOs;
 
@@ -48,10 +43,10 @@ namespace Aplicacion.Servicios
 
             _smtp.Server = "smtp.gmail.com";
             _smtp.Port = 587;
-            _smtp.UserName = "kodakjoefabricacitas@gmail.com";
-            _smtp.SenderEmail = "kodakjoefabricacitas@gmail.com";
-            _smtp.SenderName = "FabricaCitas";
-            _smtp.Password = "aiwj padb mtrz atbd";
+            _smtp.UserName = "AgendaBookify@gmail.com";
+            _smtp.SenderEmail = "AgendaBookify@gmail.com";
+            _smtp.SenderName = "Bookify";
+            _smtp.Password = "shss wuax lhan zgsb";
 
 
 
@@ -64,24 +59,22 @@ namespace Aplicacion.Servicios
                             
                             Estimado/a {nombre},
 
-                            Le agradecemos por realizar su solicitud de reserva de cita a través de nuestro sistema. Su solicitud ha sido recibida correctamente
-                            y está en proceso de revisión.
+                            Hemos recibido su solicitud de cita en nuestro sistema y se encuentra en proceso de validación.  
+                            Próximamente le enviaremos la confirmación con los detalles finales. Mientras tanto, le sugerimos mantener disponible la fecha y hora solicitadas.  
 
-                            Le informamos que en breve recibirá una confirmación oficial con los detalles finales de su cita. Mientras tanto, le pedimos mantener
-                            disponible el día y la hora solicitados para asegurar la mejor atención.
+                            Ante cualquier duda o si desea modificar la reserva, puede contactarnos sin inconvenientes.  
 
-                            Si tiene alguna consulta o necesita realizar algún cambio, no dude en contactarnos.
+                            Detalles de la cita:  
+                            Fecha: {reservaCitaModel.Fecha}  
+                            Hora: {reservaCitaModel.Hora}  
+                            Estado: {reservaCitaModel.Estado}  
 
-                            Agradecemos su confianza y quedamos atentos a cualquier comunicación.
+                            Gracias por confiar en nosotros.  
 
-                            Datos de la Cita
-                            Fecha:{reservaCitaModel.Fecha}
-                            Hora: {reservaCitaModel.Hora}
-                            Estado:{reservaCitaModel.Estado}
+                            Atentamente,  
+                            Bookify  
+                            {_smtp.SenderEmail}  
 
-                            Atentamente,
-                            Fabrica Citas
-                            {_smtp.SenderEmail}
                             """";
 
 

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj": {}
+    "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj": {}
   },
   "projects": {
-    "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Aplicacion\\Aplicacion.csproj": {
+    "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Aplicacion\\Aplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Aplicacion\\Aplicacion.csproj",
+        "projectUniqueName": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Aplicacion\\Aplicacion.csproj",
         "projectName": "Aplicacion",
-        "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Aplicacion\\Aplicacion.csproj",
-        "packagesPath": "C:\\Users\\grego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Aplicacion\\obj\\",
+        "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Aplicacion\\Aplicacion.csproj",
+        "packagesPath": "C:\\Users\\José Reyes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Aplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\grego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\José Reyes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\Dominio.csproj"
+              "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -87,24 +87,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\grego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\José Reyes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\grego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\José Reyes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -152,24 +152,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Infraestructura\\Infraestructura.csproj": {
+    "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Infraestructura\\Infraestructura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Infraestructura\\Infraestructura.csproj",
+        "projectUniqueName": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Infraestructura\\Infraestructura.csproj",
         "projectName": "Infraestructura",
-        "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Infraestructura\\Infraestructura.csproj",
-        "packagesPath": "C:\\Users\\grego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Infraestructura\\obj\\",
+        "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Infraestructura\\Infraestructura.csproj",
+        "packagesPath": "C:\\Users\\José Reyes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Infraestructura\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\grego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\José Reyes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -185,11 +185,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Aplicacion\\Aplicacion.csproj": {
-                "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Aplicacion\\Aplicacion.csproj"
+              "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Aplicacion\\Aplicacion.csproj": {
+                "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Aplicacion\\Aplicacion.csproj"
               },
-              "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Dominio\\Dominio.csproj"
+              "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -246,24 +246,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj": {
+    "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj",
+        "projectUniqueName": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj",
         "projectName": "Presentacion-reservas-citasss",
-        "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj",
-        "packagesPath": "C:\\Users\\grego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\obj\\",
+        "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss.csproj",
+        "packagesPath": "C:\\Users\\José Reyes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Presentacion-reservas-citasss\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\grego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\José Reyes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -279,8 +279,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Infraestructura\\Infraestructura.csproj": {
-                "projectPath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Infraestructura\\Infraestructura.csproj"
+              "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Infraestructura\\Infraestructura.csproj": {
+                "projectPath": "C:\\Users\\José Reyes\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Escritorio\\C# Proyects\\POO\\PGC\\Proyecto-Gestor-de-Citas\\Infraestructura\\Infraestructura.csproj"
               }
             }
           }
@@ -328,7 +328,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

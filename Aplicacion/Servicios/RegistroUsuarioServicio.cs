@@ -89,12 +89,14 @@ namespace Aplicacion.Servicios
                 return repo.RegistroUsuario(_usuario);
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
+                var inner = ex.InnerException?.Message; // <-- captura inner exception
+                var fullMessage = ex.Message + (inner != null ? " | Inner: " + inner : "");
 
-                throw new Exception("Hubo un error al registrarser el usuario " + ex.Message);
-            
-            
+                LoggerServicio.getInstancia().Error($"Hubo un error al registrar el usuario: {fullMessage}");
+
+                throw new Exception("Hubo un error al registrarse el usuario: " + fullMessage, ex);
             }
 
         }

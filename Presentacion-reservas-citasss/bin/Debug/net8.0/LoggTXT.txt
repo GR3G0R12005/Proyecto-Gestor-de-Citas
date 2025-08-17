@@ -57,3 +57,43 @@
 2025-08-17 03:08:00 [INFO] - El usuario jose se autentico correctamente a las 3:08 a. m. el dia 17/8/2025
 2025-08-17 03:08:13 [INFO] - Correo enviado sastifactoriamente a 'jose@gmail.com' despues de reservar su cita
 2025-08-17 03:08:15 [INFO] - Usuario jose reservó una cita para 17/8/2025 (turno:Matutino)
+2025-08-17 14:21:12 [INFO] - El usuario Noel se autentico correctamente a las 2:21 p. m. el dia 17/8/2025
+2025-08-17 14:23:34 [INFO] - El usuario string se registro correctamente fecha:17/8/2025 2:23:34 p. m.
+2025-08-17 14:32:28 [INFO] - El usuario Noel se autentico correctamente a las 2:32 p. m. el dia 17/8/2025
+2025-08-17 14:43:01 [INFO] - Configuracion creada exitosamente  por el admin:Noel
+2025-08-17 14:44:01 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/9/2025
+2025-08-17 14:46:43 [INFO] - El usuario José se registro correctamente fecha:17/8/2025 2:46:43 p. m.
+2025-08-17 14:54:32 [INFO] - El usuario José se registro correctamente fecha:17/8/2025 2:54:32 p. m.
+2025-08-17 14:55:30 [INFO] - El usuario José se autentico correctamente a las 2:55 p. m. el dia 17/8/2025
+2025-08-17 14:56:48 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
+2025-08-17 14:57:07 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
+2025-08-17 14:58:00 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
+2025-08-17 14:58:18 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
+2025-08-17 14:58:48 [INFO] - Correo enviado sastifactoriamente a 'josereyesmartinez1304@gmail.com' despues de reservar su cita
+2025-08-17 14:58:53 [INFO] - Usuario José reservó una cita para 17/9/2025 (turno:Matutino)
+2025-08-17 14:59:09 [INFO] - El usuario José consultó su cita en fecha: 17/8/2025 2:59:09 p. m.
+2025-08-17 15:01:13 [INFO] - Admin 'José' consultó el log a 17/8/2025 3:01:13 p. m.
+2025-08-17 15:08:20 [INFO] - El usuario José se autentico correctamente a las 3:08 p. m. el dia 17/8/2025
+2025-08-17 15:11:51 [INFO] - Correo enviado sastifactoriamente a 'josereyesmartinez1304@gmail.com' despues de reservar su cita
+2025-08-17 15:11:55 [INFO] - Usuario José reservó una cita para 17/9/2025 (turno:Matutino)
+2025-08-17 15:20:40 [INFO] - El usuario José se autentico correctamente a las 3:20 p. m. el dia 17/8/2025
+2025-08-17 15:23:18 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
+2025-08-17 15:27:42 [INFO] - El usuario Gregory se registro correctamente fecha:17/8/2025 3:27:42 p. m.
+2025-08-17 15:28:17 [INFO] - El usuario Gregory se autentico correctamente a las 3:28 p. m. el dia 17/8/2025
+2025-08-17 15:28:31 [INFO] - El usuario Gregory se autentico correctamente a las 3:28 p. m. el dia 17/8/2025
+2025-08-17 15:29:16 [INFO] - Correo enviado sastifactoriamente a 'gregorymartinez0212@gmail.com' despues de reservar su cita
+2025-08-17 15:29:20 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/9/2025
+2025-08-17 15:39:56 [INFO] - El usuario Gregory se autentico correctamente a las 3:39 p. m. el dia 17/8/2025
+2025-08-17 15:40:52 [INFO] - Correo enviado sastifactoriamente a 'gregorymartinez0212@gmail.com' despues de reservar su cita
+2025-08-17 15:40:55 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/9/2025
+2025-08-17 15:57:43 [INFO] - El usuario Gregory se autentico correctamente a las 3:57 p. m. el dia 17/8/2025
+2025-08-17 15:58:52 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/9/2025
+2025-08-17 15:59:02 [INFO] - Correo enviado sastifactoriamente a 'gregorymartinez0212@gmail.com' despues de reservar su cita
+2025-08-17 15:59:07 [INFO] - Usuario Gregory reservó una cita para 17/9/2025 (turno:Matutino)
+2025-08-17 15:59:25 [INFO] - El usuario José se autentico correctamente a las 3:59 p. m. el dia 17/8/2025
+2025-08-17 16:00:13 [INFO] - Correo enviado sastifactoriamente a 'josereyesmartinez1304@gmail.com' despues de reservar su cita
+2025-08-17 16:00:17 [INFO] - Usuario José reservó una cita para 17/9/2025 (turno:Matutino)
+2025-08-17 16:01:01 [INFO] - El usuario Noel se autentico correctamente a las 4:01 p. m. el dia 17/8/2025
+2025-08-17 16:01:34 [ERROR] - Hubo un error al registrar una reserva por Noel para 17/9/2025
+2025-08-17 16:02:34 [INFO] - El admin 'Noel' consulto sastifactoriamente la estaciones existente
+2025-08-17 16:03:26 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/9/2025
