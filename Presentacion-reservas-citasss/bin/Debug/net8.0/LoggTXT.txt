@@ -97,3 +97,4 @@
 2025-08-17 16:01:34 [ERROR] - Hubo un error al registrar una reserva por Noel para 17/9/2025
 2025-08-17 16:02:34 [INFO] - El admin 'Noel' consulto sastifactoriamente la estaciones existente
 2025-08-17 16:03:26 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/9/2025
+2025-08-17 16:18:37 [INFO] - El usuario José se autentico correctamente a las 4:18 p. m. el dia 17/8/2025
