@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "UE0mAta8WHo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\grego\\OneDrive\\Escritorio\\Presentacion-reservas-citasss\\Presentacion-reservas-citasss\\Aplicacion\\Aplicacion.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.identity.abstractions\\9.3.0\\microsoft.identity.abstractions.9.3.0.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.13.1\\microsoft.identitymodel.abstractions.8.13.1.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.13.1\\microsoft.identitymodel.jsonwebtokens.8.13.1.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.identitymodel.logging\\8.13.1\\microsoft.identitymodel.logging.8.13.1.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.13.1\\microsoft.identitymodel.tokens.8.13.1.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\grego\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.13.1\\system.identitymodel.tokens.jwt.8.13.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,282 @@
+[
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.ConfiguracionReservaController",
+    "Method": "CrearConfiguracion",
+    "RelativePath": "api/ConfiguracionReserva/Crear-configuracion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "configuracion",
+        "Type": "Aplicacion.DTOs.ConfiguracionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.ConfiguracionReservaController",
+    "Method": "ModificarConfiguracion",
+    "RelativePath": "api/ConfiguracionReserva/Modificar-configuracion",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "config",
+        "Type": "Aplicacion.DTOs.ConfiguracionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.ConfiguracionReservaController",
+    "Method": "GetConfiguracion",
+    "RelativePath": "api/ConfiguracionReserva/Obtener-configuracion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Aplicacion.DTOs.ConfiguracionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.EstacionController",
+    "Method": "AgregarEstacion",
+    "RelativePath": "api/Estacion/Agregar-Estacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estacion",
+        "Type": "Aplicacion.DTOs.EstacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.EstacionController",
+    "Method": "ModificarEstacion",
+    "RelativePath": "api/Estacion/Modificar-estacion",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estacion",
+        "Type": "Aplicacion.DTOs.EstacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.EstacionController",
+    "Method": "obtenerEstaciones",
+    "RelativePath": "api/Estacion/Obtener-estaciones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Aplicacion.DTOs.EstacionDTO, Aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.GeneracionSlotController",
+    "Method": "ObtenerSlots",
+    "RelativePath": "api/GeneracionSlot/obtener-slots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.LeerLoggController",
+    "Method": "getLoogActividades",
+    "RelativePath": "api/LeerLogg/consultar-logg",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.RegistroUsuarioController",
+    "Method": "LoginUsuario",
+    "RelativePath": "api/RegistroUsuario/Login-usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "contrase\u00F1a",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.RegistroUsuarioController",
+    "Method": "RegistroUsuario",
+    "RelativePath": "api/RegistroUsuario/Registro-usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "Aplicacion.DTOs.RegistroUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.ReservarCitaController",
+    "Method": "ReservarCita",
+    "RelativePath": "api/ReservarCita/Registra-Reserva",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dTO",
+        "Type": "Aplicacion.DTOs.ReservaCitasDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.ReservarCitaController",
+    "Method": "VerReserva",
+    "RelativePath": "api/ReservarCita/Ver-mi-Reserva",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentacion_reservas_citasss.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Presentacion_reservas_citasss.WeatherForecast, Presentacion-reservas-citasss, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
