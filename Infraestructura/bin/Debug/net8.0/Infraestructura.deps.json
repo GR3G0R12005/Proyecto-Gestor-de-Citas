@@ -945,18 +945,12 @@
           "System.IdentityModel.Tokens.Jwt": "8.13.1"
         },
         "runtime": {
-          "Aplicacion.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Aplicacion.dll": {}
         }
       },
       "Dominio/1.0.0": {
         "runtime": {
-          "Dominio.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Dominio.dll": {}
         }
       }
     }

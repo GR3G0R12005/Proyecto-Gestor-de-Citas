@@ -21,3 +21,15 @@ C:\Users\grego\OneDrive\Escritorio\Presentacion-reservas-citasss\Presentacion-re
 C:\Users\grego\OneDrive\Escritorio\Presentacion-reservas-citasss\Presentacion-reservas-citasss\Dominio\obj\Debug\net8.0\refint\Dominio.dll
 C:\Users\grego\OneDrive\Escritorio\Presentacion-reservas-citasss\Presentacion-reservas-citasss\Dominio\obj\Debug\net8.0\Dominio.pdb
 C:\Users\grego\OneDrive\Escritorio\Presentacion-reservas-citasss\Presentacion-reservas-citasss\Dominio\obj\Debug\net8.0\ref\Dominio.dll
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\bin\Debug\net8.0\Dominio.deps.json
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\bin\Debug\net8.0\Dominio.dll
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\bin\Debug\net8.0\Dominio.pdb
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfo.cs
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\Dominio.sourcelink.json
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\Dominio.dll
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\refint\Dominio.dll
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\Dominio.pdb
+C:\Users\José Reyes\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Escritorio\C# Proyects\POO\PGC\Proyecto-Gestor-de-Citas\Dominio\obj\Debug\net8.0\ref\Dominio.dll
