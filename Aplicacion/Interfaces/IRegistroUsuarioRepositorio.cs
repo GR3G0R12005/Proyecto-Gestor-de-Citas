@@ -12,7 +12,7 @@ namespace Aplicacion.Interfaces
 
         string RegistroUsuario(RegistroUsuario usuario);
 
-        RegistroUsuario LoginUsuario(string nombre, string contraseña);
+        RegistroUsuario LoginUsuario(string correo, string contraseña);
 
 
         bool BuscarUsuario(int id);

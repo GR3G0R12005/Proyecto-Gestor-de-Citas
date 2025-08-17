@@ -22,10 +22,9 @@ namespace Infraestructura.Repositorios
         }
 
 
-        public RegistroUsuario LoginUsuario(string nombre, string contraseña)
+        public RegistroUsuario LoginUsuario(string correo, string contraseña)
         {
-            var usuario = context.RegistroUsuarios
-                       .FirstOrDefault(u => u.Nombre == nombre && u.Contraseña == contraseña);
+            var usuario = context.RegistroUsuarios.FirstOrDefault(u => u.Correo == correo && u.Contraseña == contraseña);
 
             if (usuario == null) {
 

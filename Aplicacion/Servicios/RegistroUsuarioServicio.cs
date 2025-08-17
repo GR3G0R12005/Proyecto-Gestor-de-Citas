@@ -105,16 +105,16 @@ namespace Aplicacion.Servicios
 
       
 
-        public LoginUsuarioDTO ValidarLoginUsuario(string nombre, string contraseña)
+        public LoginUsuarioDTO ValidarLoginUsuario(string correo, string contraseña)
         {
 
             try
             {
-                var usuario = repo.LoginUsuario(nombre, contraseña);
+                var usuario = repo.LoginUsuario(correo, contraseña);
 
                 if (usuario == null)
                 {
-                    LoggerServicio.getInstancia().Error($"Fallo al intentar registrase usuario {nombre} ingreso mal sus credenciales");
+                    LoggerServicio.getInstancia().Error($"Fallo al intentar registrar usuario");
                     throw new Exception("Usuario o contraseña incorrecta");
                 }
 
@@ -136,14 +136,14 @@ namespace Aplicacion.Servicios
 
                 };
 
-                LoggerServicio.getInstancia().Info($"El usuario {nombre} se autentico correctamente a las {TimeOnly.FromDateTime(DateTime.Now)} el dia {DateOnly.FromDateTime(DateTime.Today)}");
+                LoggerServicio.getInstancia().Info($"El usuario {usuario.Nombre} se autentico correctamente a las {TimeOnly.FromDateTime(DateTime.Now)} el dia {DateOnly.FromDateTime(DateTime.Today)}");
                 return usuarioLoguiado;
             }
             catch (Exception ex) 
             {
 
 
-                throw new Exception("Hubo un error al logiarse " + ex.Message);
+                throw new Exception("Hubo un error al logearse " + ex.Message);
             
             
             }

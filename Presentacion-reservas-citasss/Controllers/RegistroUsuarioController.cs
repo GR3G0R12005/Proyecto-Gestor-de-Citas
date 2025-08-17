@@ -67,16 +67,12 @@ namespace Presentacion_reservas_citasss.Controllers
 
         [AllowAnonymous]
         [HttpPost("Login-usuario")]
-        public dynamic LoginUsuario(string nombre, string contraseña)
+        public dynamic LoginUsuario(string correo, string contraseña)
         {
 
             try
-            {
-
-              
-                
-
-                var usuariodto = servicio.ValidarLoginUsuario(nombre, contraseña);
+            {           
+                var usuariodto = servicio.ValidarLoginUsuario(correo, contraseña);
 
 
                 if (usuariodto == null)
