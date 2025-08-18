@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>Bookify</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bienvenido a Bookify</h1>
+
+    <form id="loginForm">
+        <h2>¡Logeate para Agendar!</h2>
+
+        <label for="loginCorreo">Correo:</label><br>
+        <input type="email" id="loginCorreo" name="loginCorreo"><br><br>
+
+        <label for="loginContraseña">Contraseña:</label><br>
+        <input type="password" id="loginContraseña" name="loginContraseña"><br><br>
+
+        <h3>¿No tienes una cuenta? <a href="registro.html">Registrarse</a></h3>
+
+        <button type="button" onclick="logearse()">Iniciar Sesión</button>
+    </form>
+    <p id="loginMessage"></p>
+</div>
+    <script src="../JS/Login.js"></script>
+</body>
+</html>
