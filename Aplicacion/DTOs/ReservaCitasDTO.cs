@@ -12,7 +12,7 @@ namespace Aplicacion.DTOs
 
         public DateOnly Fecha { get; set; }
 
-        public string Hora { get; set; } 
+        public string? Hora { get; set; } 
 
         public string Turno { get; set; } = null!;
 

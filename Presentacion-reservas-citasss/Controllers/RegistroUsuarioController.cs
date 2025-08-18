@@ -1,10 +1,7 @@
-﻿using System.Security.Claims;
-using Aplicacion.DTOs;
+﻿using Aplicacion.DTOs;
 using Aplicacion.Servicios;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace Presentacion_reservas_citasss.Controllers
 {
@@ -13,110 +10,69 @@ namespace Presentacion_reservas_citasss.Controllers
     [ApiController]
     public class RegistroUsuarioController : ControllerBase
     {
-
-        private readonly RegistroUsuarioServicio servicio;
+        private readonly RegistroServicio servicio;
         private readonly GeneracionTokenServicio token;
 
-
-
-        public RegistroUsuarioController(RegistroUsuarioServicio servicio, GeneracionTokenServicio token) 
+        public RegistroUsuarioController(RegistroServicio servicio, GeneracionTokenServicio token) 
         {
-        
             this.servicio = servicio;
             this.token = token; 
-        
         }
 
-
-
         [AllowAnonymous]
-        [HttpPost("Registro-usuario")]
+        [HttpPost("Registrarse")]
         public dynamic RegistroUsuario(RegistroUsuarioDTO usuario)
         {
 
+            var RegistroUsuario = servicio.AddUsuario(usuario);
 
-          
-            var RegistroUsuario = servicio.AgregarUsuario(usuario);
-
-
-           
             if (RegistroUsuario == null)
             {
                 return BadRequest(new { message = "No se pudo registrar el usuario (puede que ya exista)" });
             }
 
-
             string id = Convert.ToString(usuario.Id);
 
-            string _token = token.GenerarToken(usuario.Nombre, usuario.Apellido, usuario.Correo, id);
-
-
-
+            string _token = token.GenerarToken(usuario.Nombre, usuario.Correo, id);
 
             return Ok(new
             {
                 token = _token,
                 usuario = RegistroUsuario
             });
-
-
         }
 
-
-
-
         [AllowAnonymous]
-        [HttpPost("Login-usuario")]
+        [HttpPost("Logearse")]
         public dynamic LoginUsuario(string correo, string contraseña)
         {
-
             try
             {           
-                var usuariodto = servicio.ValidarLoginUsuario(correo, contraseña);
-
+                var usuariodto = servicio.ValidacionLogin(correo, contraseña);
 
                 if (usuariodto == null)
                 {
                     return new
                     {
                         Success = false,
-                        message = "Credenciales incorrectas",
+                        message = "Error en credenciales, probablemente incorrecta",
                         result = ""
-
                     };
-
-
-                    
                 }
 
-
                 string id = Convert.ToString(usuariodto.Id);
-                string tokenString = token.GenerarToken(usuariodto.Nombre,usuariodto.Apellido,usuariodto.Correo, id);
-
-
-
+                string tokenString = token.GenerarToken(usuariodto.Nombre, usuariodto.Correo, id);
 
                 return Ok(new
                 {
                     token = tokenString,
                     usuario = usuariodto
                 });
-
-
-
-
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
-
             }
-
         }
-
-
-
-
-
     }
 }

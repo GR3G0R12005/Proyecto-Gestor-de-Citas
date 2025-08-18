@@ -98,3 +98,5 @@
 2025-08-17 16:02:34 [INFO] - El admin 'Noel' consulto sastifactoriamente la estaciones existente
 2025-08-17 16:03:26 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/9/2025
 2025-08-17 16:18:37 [INFO] - El usuario José se autentico correctamente a las 4:18 p. m. el dia 17/8/2025
+2025-08-17 23:49:28 [INFO] - string se registro el 17/8/2025 11:49:28 p. m.
+2025-08-17 23:52:15 [INFO] - string se autentico correctamente el 17/8/2025 11:52:15 p. m.

@@ -25,5 +25,5 @@ public partial class ReservaCita
 
     public virtual Estacione IdEstacionNavigation { get; set; } = null!;
 
-    public virtual RegistroUsuario IdUsuarioNavigation { get; set; } = null!;
+    public virtual Registro IdUsuarioNavigation { get; set; } = null!;
 }

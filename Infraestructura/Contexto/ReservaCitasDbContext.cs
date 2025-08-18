@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Infraestructura.Modelos;
+﻿using Infraestructura.Modelos;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructura.Contexto;
@@ -10,18 +8,16 @@ public partial class ReservaCitasDbContext : DbContext
     public ReservaCitasDbContext()
     {
     }
-
     public ReservaCitasDbContext(DbContextOptions<ReservaCitasDbContext> options)
         : base(options)
     {
     }
 
-
     public virtual DbSet<ConfiguracionReserva> ConfiguracionReservas { get; set; }
 
     public virtual DbSet<Estacione> Estaciones { get; set; }
 
-    public virtual DbSet<RegistroUsuario> RegistroUsuarios { get; set; }
+    public virtual DbSet<Registro> RegistroUsuarios { get; set; }
 
     public virtual DbSet<ReservaCita> ReservaCitas { get; set; }
 
@@ -60,28 +56,19 @@ public partial class ReservaCitasDbContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<RegistroUsuario>(entity =>
+        modelBuilder.Entity<Registro>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Registro__3214EC076AA3A1C2");
 
-            entity.ToTable("RegistroUsuario");
+            entity.ToTable("Registro");
 
             entity.HasIndex(e => e.Correo, "UQ__Registro__60695A19309A357D").IsUnique();
 
             entity.HasIndex(e => e.Contraseña, "UQ__Registro__A961D9D23225BB50").IsUnique();
 
-            entity.HasIndex(e => e.Cedula, "UQ__Registro__B4ADFE38ADE8AF5C").IsUnique();
-
             entity.HasIndex(e => new { e.Id, e.Correo }, "idx_Nombre");
 
-            entity.HasIndex(e => new { e.Nombre, e.Apellido, e.Cedula, e.Correo, e.Contraseña, e.Sexo }, "idx_noRepetirRegistro").IsUnique();
-
-            entity.Property(e => e.Apellido)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Cedula)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+            entity.HasIndex(e => new { e.Nombre,  e.Correo, e.Contraseña }, "idx_noRepetirRegistro").IsUnique();
             entity.Property(e => e.Contraseña)
                 .HasMaxLength(10)
                 .IsUnicode(false);
@@ -91,10 +78,6 @@ public partial class ReservaCitasDbContext : DbContext
             entity.Property(e => e.Nombre)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.Sexo)
-                .HasMaxLength(1)
-                .IsUnicode(false)
-                .IsFixedLength();
         });
 
         modelBuilder.Entity<ReservaCita>(entity =>
@@ -121,7 +104,7 @@ public partial class ReservaCitasDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__ReservaCi__IdEst__4222D4EF");
 
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.ReservaCita)
+            _ = entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.ReservaCita)
                 .HasForeignKey(d => d.IdUsuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__ReservaCi__IdUsu__412EB0B6");

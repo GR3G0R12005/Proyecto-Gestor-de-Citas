@@ -42,7 +42,7 @@ namespace Presentacion_reservas_citasss.Controllers
                   if(nombre == null)
                     throw new Exception("Nombre no encontrado");
 
-                int idUsuario = int.Parse(User.FindFirstValue("id"));
+                int idUsuario = int.Parse(User.FindFirstValue("id")!);
                     if(idUsuario <=0)
                     throw new Exception("Usuario no autenticado");
 

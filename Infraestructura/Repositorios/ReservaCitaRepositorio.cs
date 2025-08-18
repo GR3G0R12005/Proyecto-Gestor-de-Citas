@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aplicacion.Interfaces;
+﻿using Aplicacion.Interfaces;
 using Infraestructura.Contexto;
 using Infraestructura.Modelos;
 using Microsoft.Data.SqlClient;
@@ -46,7 +41,7 @@ namespace Infraestructura.Repositorios
                     })
                     .FirstOrDefault();
 
-                return cita;
+                return cita!;
             }
             catch (Exception ex)
             {

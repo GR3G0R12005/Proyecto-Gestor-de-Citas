@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using Aplicacion.DTOs;
 using Aplicacion.Interfaces;
 using Infraestructura.Modelos;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Aplicacion.Servicios
 {
@@ -54,7 +47,7 @@ namespace Aplicacion.Servicios
 
                 var slotsDisponibles = servicio.GenerarSlots(reservaModel.Fecha, reservaModel.Turno);
 
-                var horaInput = TimeOnly.ParseExact(reservaModel.Hora, "HH:mm", CultureInfo.InvariantCulture);
+                var horaInput = TimeOnly.ParseExact(reservaModel.Hora!, "HH:mm", CultureInfo.InvariantCulture);
                 var slotSeleccionado = slotsDisponibles
                     .FirstOrDefault(s => s.HoraInicio == horaInput);
 

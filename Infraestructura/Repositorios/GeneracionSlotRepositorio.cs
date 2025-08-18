@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aplicacion.Interfaces;
+﻿using Aplicacion.Interfaces;
 using Infraestructura.Contexto;
 using Infraestructura.Modelos;
 
@@ -28,7 +23,7 @@ namespace Infraestructura.Repositorios
         public ConfiguracionReserva obtenerConfiguracion(DateOnly fecha, string turno)
         {
             var configuracion = context.ConfiguracionReservas.FirstOrDefault(x => x.Fecha == fecha && x.Turno == turno);
-            return configuracion;
+            return configuracion!;
 
         }
 
