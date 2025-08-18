@@ -1,55 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aplicacion.Interfaces;
+﻿using Aplicacion.Interfaces;
 using Infraestructura.Contexto;
 using Infraestructura.Modelos;
 
 namespace Infraestructura.Repositorios
 {
-    public class RegistroUsuarioRepositorio : IRegistroUsuarioRepositorio
+    public class RegistroRepositorio : IRegistroRepositorio
     {
         private readonly ReservaCitasDbContext context;
 
-
-        public RegistroUsuarioRepositorio(ReservaCitasDbContext context)
+        public RegistroRepositorio(ReservaCitasDbContext context)
         {
-
             this.context = context;
-
         }
 
-
-        public RegistroUsuario LoginUsuario(string correo, string contraseña)
-        {
-            var usuario = context.RegistroUsuarios.FirstOrDefault(u => u.Correo == correo && u.Contraseña == contraseña);
-
-            if (usuario == null) {
-
-                throw new Exception("El usuario no esta registrados");
-            }
-
-            return usuario;
-        }
-
-
-        public string RegistroUsuario(RegistroUsuario usuario)
+        public string Registrarse(Registro usuario)
         {
             context.RegistroUsuarios.Add(usuario);
             context.SaveChanges();
 
             return "Registrado correctamente";
         }
-
-
-
-
-
-        public int? buscarIdUsuario(string correo)
+        
+        public Registro Logearse(string correo, string contraseña)
         {
+            var usuario = context.RegistroUsuarios.FirstOrDefault(u => u.Correo == correo && u.Contraseña == contraseña);
 
+            if (usuario == null)
+            {
+
+                throw new Exception("El usuario no esta registrados");
+            }
+            return usuario;
+        }
+
+        public int? BuscarId(string correo)
+        {
             var user = context.RegistroUsuarios.FirstOrDefault(u => u.Correo == correo);
 
             if (user == null)
@@ -57,29 +42,18 @@ namespace Infraestructura.Repositorios
 
                 return null;
             }
-
             return user.Id;
-
         }
 
         public bool BuscarUsuario(int id)
         {
-
             var usuario = context.RegistroUsuarios.FirstOrDefault(x => x.Id == id);
 
             if (usuario == null)
             {
-
                 return false;
-
             }
-
             return true;
-
         }
-
-
-
-
     }
 }

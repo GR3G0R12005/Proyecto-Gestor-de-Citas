@@ -1,4 +1,3 @@
-
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -66,8 +65,8 @@ namespace Presentacion_reservas_citasss
 
 
             //Cofiguraciones mis servicios de inyecciones de dependecias
-            builder.Services.AddScoped<IRegistroUsuarioRepositorio, RegistroUsuarioRepositorio>();
-            builder.Services.AddScoped<IRegistroUsuarioServicio, RegistroUsuarioServicio>();
+            builder.Services.AddScoped<IRegistroRepositorio, RegistroRepositorio>();
+            builder.Services.AddScoped<IRegistroServicio, RegistroServicio>();
             builder.Services.AddScoped<IConfiguracionReservaServicio, ConfiguracionReservaServicio>();
             builder.Services.AddScoped<IConfiguracionReservaRepositorio,ConfiguracionReservaRepositorio>();
             builder.Services.AddScoped<IGeneracionSlotServicio, GeneracionSlotServicio>();
@@ -84,7 +83,7 @@ namespace Presentacion_reservas_citasss
             builder.Services.AddScoped<EnvioGmailServicio>();
             builder.Services.AddScoped<GeneracionSlotServicio>();
             builder.Services.AddScoped<GeneracionTokenServicio>();
-            builder.Services.AddScoped<RegistroUsuarioServicio>();
+            builder.Services.AddScoped<RegistroServicio>();
             builder.Services.AddScoped<ConfiguracionReservaServicio>();
             builder.Services.AddScoped<EstacionServicio>();
             builder.Services.AddScoped<EstacionRepositorio>();
@@ -109,7 +108,7 @@ namespace Presentacion_reservas_citasss
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = builder.Configuration["Jwt:Issuer"],
                     ValidAudience = builder.Configuration["Jwt:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
 
 
                 };

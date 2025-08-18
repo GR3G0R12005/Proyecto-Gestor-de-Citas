@@ -26,7 +26,7 @@ namespace Aplicacion.Servicios
 
 
         //Configuracion de json web token para darle seguimiento al usuario
-        public string GenerarToken(string nombre, string apellido, string correo, string id)
+        public string GenerarToken(string nombre, string correo, string id)
         {
 
 
@@ -52,7 +52,6 @@ namespace Aplicacion.Servicios
                     new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64),
                     new Claim("id", id),
                     new Claim("Nombre", nombre),
-                    new Claim("Apellido", apellido),
                     new Claim("Correo", correo),
                     
 
