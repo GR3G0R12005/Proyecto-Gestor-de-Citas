@@ -41,23 +41,22 @@ namespace Presentacion_reservas_citasss.Controllers
                 usuario = RegistroUsuario
             });
         }
-
         [AllowAnonymous]
         [HttpPost("Logearse")]
-        public dynamic LoginUsuario(string correo, string contraseña)
+        public IActionResult LoginUsuario([FromBody] LoginDTO login)
         {
             try
-            {           
-                var usuariodto = servicio.ValidacionLogin(correo, contraseña);
+            {
+                var usuariodto = servicio.ValidacionLogin(login.Correo, login.Contraseña);
 
                 if (usuariodto == null)
                 {
-                    return new
+                    return BadRequest(new
                     {
-                        Success = false,
-                        message = "Error en credenciales, probablemente incorrecta",
+                        success = false,
+                        message = "Error en credenciales, probablemente incorrectas",
                         result = ""
-                    };
+                    });
                 }
 
                 string id = Convert.ToString(usuariodto.Id);
@@ -65,13 +64,19 @@ namespace Presentacion_reservas_citasss.Controllers
 
                 return Ok(new
                 {
+                    success = true,
                     token = tokenString,
                     usuario = usuariodto
                 });
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return StatusCode(500, new
+                {
+                    success = false,
+                    message = "Error interno del servidor",
+                    error = ex.Message
+                });
             }
         }
     }
