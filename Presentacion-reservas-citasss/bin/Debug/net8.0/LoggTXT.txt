@@ -1,119 +1,64 @@
-2025-08-17 00:45:06 ---> Error: Fallo al intentar leer el log de actividades por el admin:Noel en fecha:17/8/2025 12:45:06 a. m.
-2025-08-17 01:06:26 [INFO] - El usuario Noel se autentico correctamente a las 1:06 a. m. el dia 17/8/2025
-2025-08-17 01:06:59 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 1:06:59 a. m.
-2025-08-17 01:07:34 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 1:07:34 a. m.
-2025-08-17 01:07:50 [ERROR] - Fallo al consultar reserva por usuario Noel no tenía cita
-2025-08-17 01:07:50 [ERROR] - Error al obtener la cita de Noel: No tiene cita reservada
-2025-08-17 01:07:57 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 1:07:57 a. m.
-2025-08-17 01:09:53 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/8/2025
-2025-08-17 01:11:18 [INFO] - El usuario Nagui se autentico correctamente a las 1:11 a. m. el dia 17/8/2025
-2025-08-17 01:11:42 [ERROR] - Fallo a crear configuracion por el admin:Noel, no indico la duracion de la cita
-2025-08-17 01:12:26 [ERROR] - Fallo a crear configuracion por el admin:Nagui, no indico la duracion de la cita
-2025-08-17 01:13:06 [INFO] - configuracion consultada correctamente por admin:Nagui turno:Matutino fecha:17/8/2025
-2025-08-17 01:13:53 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:14:07 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:17:10 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:19:35 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:21:58 [INFO] - El usuario Nagui se autentico correctamente a las 1:21 a. m. el dia 17/8/2025
-2025-08-17 01:22:46 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:24:08 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:26:10 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:26:13 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:26:58 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:29:12 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:29:40 [INFO] - Configuracion creada exitosamente  por el admin:Nagui
-2025-08-17 01:32:44 [INFO] - El usuario Noel se autentico correctamente a las 1:32 a. m. el dia 17/8/2025
-2025-08-17 01:33:12 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 01:34:06 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 01:34:34 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 01:35:10 [ERROR] - Fallo al consultar una configuracion el admin:Noel no indico unt turno correcto
-2025-08-17 01:36:05 [INFO] - El usuario Noel se autentico correctamente a las 1:36 a. m. el dia 17/8/2025
-2025-08-17 01:36:30 [ERROR] - Fallo a crear configuracion por el admin:Noel, no indico la duracion de la cita
-2025-08-17 01:37:33 [ERROR] - Fallo al crear configuracion el admin:Noel no indico valores correcto para el horario vesrpertino
-2025-08-17 01:37:56 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 01:38:04 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 01:39:46 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 02:11:58 [INFO] - El usuario Noel se autentico correctamente a las 2:11 a. m. el dia 17/8/2025
-2025-08-17 02:20:10 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 02:20:46 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/8/2025
-2025-08-17 02:49:21 [INFO] - El usuario Nagui se autentico correctamente a las 2:49 a. m. el dia 17/8/2025
-2025-08-17 02:50:38 [INFO] - Correo enviado sastifactoriamente a 'noel@gmail.com' despues de reservar su cita
-2025-08-17 02:50:40 [INFO] - Usuario Noel reservó una cita para 17/8/2025 (turno:Matutino)
-2025-08-17 02:51:58 [INFO] - Admin 'Noel' consultó el log a 17/8/2025 2:51:58 a. m.
-2025-08-17 02:52:24 [INFO] - El usuario Nagui se autentico correctamente a las 2:52 a. m. el dia 17/8/2025
-2025-08-17 02:52:29 [INFO] - El usuario Nagui se autentico correctamente a las 2:52 a. m. el dia 17/8/2025
-2025-08-17 02:52:37 [ERROR] - Hubo un error al registrar una reserva por Noel para 17/8/2025
-2025-08-17 02:53:13 [INFO] - El usuario Nagui se autentico correctamente a las 2:53 a. m. el dia 17/8/2025
-2025-08-17 02:53:19 [INFO] - Correo enviado sastifactoriamente a 'Nagui@gmail.com' despues de reservar su cita
-2025-08-17 02:53:20 [INFO] - Usuario Nagui reservó una cita para 17/8/2025 (turno:Matutino)
-2025-08-17 02:53:46 [INFO] - Admin 'Nagui' consultó el log a 17/8/2025 2:53:46 a. m.
-2025-08-17 02:53:59 [INFO] - El usuario Nagui consultó su cita en fecha: 17/8/2025 2:53:59 a. m.
-2025-08-17 02:59:34 [INFO] - El usuario Gregory se registro correctamente fecha:17/8/2025 2:59:34 a. m.
-2025-08-17 03:00:30 [INFO] - El usuario Gregory se autentico correctamente a las 3:00 a. m. el dia 17/8/2025
-2025-08-17 03:00:40 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/8/2025
-2025-08-17 03:00:52 [INFO] - Correo enviado sastifactoriamente a 'gregory@gmail.com' despues de reservar su cita
-2025-08-17 03:00:54 [INFO] - Usuario Gregory reservó una cita para 17/8/2025 (turno:Matutino)
-2025-08-17 03:07:21 [INFO] - El usuario jose se registro correctamente fecha:17/8/2025 3:07:21 a. m.
-2025-08-17 03:08:00 [INFO] - El usuario jose se autentico correctamente a las 3:08 a. m. el dia 17/8/2025
-2025-08-17 03:08:13 [INFO] - Correo enviado sastifactoriamente a 'jose@gmail.com' despues de reservar su cita
-2025-08-17 03:08:15 [INFO] - Usuario jose reservó una cita para 17/8/2025 (turno:Matutino)
-2025-08-17 14:21:12 [INFO] - El usuario Noel se autentico correctamente a las 2:21 p. m. el dia 17/8/2025
-2025-08-17 14:23:34 [INFO] - El usuario string se registro correctamente fecha:17/8/2025 2:23:34 p. m.
-2025-08-17 14:32:28 [INFO] - El usuario Noel se autentico correctamente a las 2:32 p. m. el dia 17/8/2025
-2025-08-17 14:43:01 [INFO] - Configuracion creada exitosamente  por el admin:Noel
-2025-08-17 14:44:01 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/9/2025
-2025-08-17 14:46:43 [INFO] - El usuario José se registro correctamente fecha:17/8/2025 2:46:43 p. m.
-2025-08-17 14:54:32 [INFO] - El usuario José se registro correctamente fecha:17/8/2025 2:54:32 p. m.
-2025-08-17 14:55:30 [INFO] - El usuario José se autentico correctamente a las 2:55 p. m. el dia 17/8/2025
-2025-08-17 14:56:48 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
-2025-08-17 14:57:07 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
-2025-08-17 14:58:00 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
-2025-08-17 14:58:18 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
-2025-08-17 14:58:48 [INFO] - Correo enviado sastifactoriamente a 'josereyesmartinez1304@gmail.com' despues de reservar su cita
-2025-08-17 14:58:53 [INFO] - Usuario José reservó una cita para 17/9/2025 (turno:Matutino)
-2025-08-17 14:59:09 [INFO] - El usuario José consultó su cita en fecha: 17/8/2025 2:59:09 p. m.
-2025-08-17 15:01:13 [INFO] - Admin 'José' consultó el log a 17/8/2025 3:01:13 p. m.
-2025-08-17 15:08:20 [INFO] - El usuario José se autentico correctamente a las 3:08 p. m. el dia 17/8/2025
-2025-08-17 15:11:51 [INFO] - Correo enviado sastifactoriamente a 'josereyesmartinez1304@gmail.com' despues de reservar su cita
-2025-08-17 15:11:55 [INFO] - Usuario José reservó una cita para 17/9/2025 (turno:Matutino)
-2025-08-17 15:20:40 [INFO] - El usuario José se autentico correctamente a las 3:20 p. m. el dia 17/8/2025
-2025-08-17 15:23:18 [ERROR] - Hubo un error al registrar una reserva por José para 17/9/2025
-2025-08-17 15:27:42 [INFO] - El usuario Gregory se registro correctamente fecha:17/8/2025 3:27:42 p. m.
-2025-08-17 15:28:17 [INFO] - El usuario Gregory se autentico correctamente a las 3:28 p. m. el dia 17/8/2025
-2025-08-17 15:28:31 [INFO] - El usuario Gregory se autentico correctamente a las 3:28 p. m. el dia 17/8/2025
-2025-08-17 15:29:16 [INFO] - Correo enviado sastifactoriamente a 'gregorymartinez0212@gmail.com' despues de reservar su cita
-2025-08-17 15:29:20 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/9/2025
-2025-08-17 15:39:56 [INFO] - El usuario Gregory se autentico correctamente a las 3:39 p. m. el dia 17/8/2025
-2025-08-17 15:40:52 [INFO] - Correo enviado sastifactoriamente a 'gregorymartinez0212@gmail.com' despues de reservar su cita
-2025-08-17 15:40:55 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/9/2025
-2025-08-17 15:57:43 [INFO] - El usuario Gregory se autentico correctamente a las 3:57 p. m. el dia 17/8/2025
-2025-08-17 15:58:52 [ERROR] - Hubo un error al registrar una reserva por Gregory para 17/9/2025
-2025-08-17 15:59:02 [INFO] - Correo enviado sastifactoriamente a 'gregorymartinez0212@gmail.com' despues de reservar su cita
-2025-08-17 15:59:07 [INFO] - Usuario Gregory reservó una cita para 17/9/2025 (turno:Matutino)
-2025-08-17 15:59:25 [INFO] - El usuario José se autentico correctamente a las 3:59 p. m. el dia 17/8/2025
-2025-08-17 16:00:13 [INFO] - Correo enviado sastifactoriamente a 'josereyesmartinez1304@gmail.com' despues de reservar su cita
-2025-08-17 16:00:17 [INFO] - Usuario José reservó una cita para 17/9/2025 (turno:Matutino)
-2025-08-17 16:01:01 [INFO] - El usuario Noel se autentico correctamente a las 4:01 p. m. el dia 17/8/2025
-2025-08-17 16:01:34 [ERROR] - Hubo un error al registrar una reserva por Noel para 17/9/2025
-2025-08-17 16:02:34 [INFO] - El admin 'Noel' consulto sastifactoriamente la estaciones existente
-2025-08-17 16:03:26 [INFO] - configuracion consultada correctamente por admin:Noel turno:Matutino fecha:17/9/2025
-2025-08-17 16:18:37 [INFO] - El usuario José se autentico correctamente a las 4:18 p. m. el dia 17/8/2025
-2025-08-17 23:49:28 [INFO] - string se registro el 17/8/2025 11:49:28 p. m.
-2025-08-17 23:52:15 [INFO] - string se autentico correctamente el 17/8/2025 11:52:15 p. m.
-2025-08-18 18:15:36 [INFO] - José se autentico correctamente el 18/8/2025 6:15:36 p. m.
-2025-08-18 18:15:36 [INFO] - José se autentico correctamente el 18/8/2025 6:15:36 p. m.
-2025-08-18 18:15:36 [INFO] - José se autentico correctamente el 18/8/2025 6:15:36 p. m.
-2025-08-18 18:15:36 [INFO] - José se autentico correctamente el 18/8/2025 6:15:36 p. m.
-2025-08-18 18:15:37 [INFO] - José se autentico correctamente el 18/8/2025 6:15:37 p. m.
-2025-08-18 18:15:45 [INFO] - José se autentico correctamente el 18/8/2025 6:15:45 p. m.
-2025-08-18 18:45:08 [INFO] - José se autentico correctamente el 18/8/2025 6:45:08 p. m.
-2025-08-18 18:45:08 [INFO] - José se autentico correctamente el 18/8/2025 6:45:08 p. m.
-2025-08-18 18:45:08 [INFO] - José se autentico correctamente el 18/8/2025 6:45:08 p. m.
-2025-08-18 18:45:08 [INFO] - José se autentico correctamente el 18/8/2025 6:45:08 p. m.
-2025-08-18 18:45:08 [INFO] - José se autentico correctamente el 18/8/2025 6:45:08 p. m.
-2025-08-18 18:45:09 [INFO] - José se autentico correctamente el 18/8/2025 6:45:09 p. m.
-2025-08-18 18:45:09 [INFO] - José se autentico correctamente el 18/8/2025 6:45:09 p. m.
-2025-08-18 18:45:09 [INFO] - José se autentico correctamente el 18/8/2025 6:45:09 p. m.
-2025-08-18 18:45:09 [INFO] - José se autentico correctamente el 18/8/2025 6:45:09 p. m.
-2025-08-18 18:45:09 [INFO] - José se autentico correctamente el 18/8/2025 6:45:09 p. m.
-2025-08-18 18:45:18 [INFO] - José se autentico correctamente el 18/8/2025 6:45:18 p. m.
+2025-08-18 20:00:29 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 8:00:29 p. m.
+2025-08-18 20:00:47 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 8:00:47 p. m.
+2025-08-18 20:01:01 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 8:01:01 p. m.
+2025-08-18 20:53:00 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 8:53:00 p. m.
+2025-08-18 20:54:11 [INFO] - Configuracion creada exitosamente  por el admin:Gregory Martinez
+2025-08-18 21:07:38 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 9:07:38 p. m.
+2025-08-18 21:08:38 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 9:08:38 p. m.
+2025-08-18 21:09:05 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 9:09:05 p. m.
+2025-08-18 21:09:15 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 9:09:15 p. m.
+2025-08-18 21:09:42 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 9:09:42 p. m.
+2025-08-18 21:10:19 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 9:10:19 p. m.
+2025-08-18 22:31:33 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 10:31:33 p. m.
+2025-08-18 22:41:15 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 10:41:15 p. m.
+2025-08-18 22:41:27 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 10:41:26 p. m.
+2025-08-18 22:44:20 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 10:44:20 p. m.
+2025-08-18 22:44:40 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 10:44:40 p. m.
+2025-08-18 23:13:16 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:13:16 p. m.
+2025-08-18 23:13:28 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:13:28 p. m.
+2025-08-18 23:13:45 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:13:45 p. m.
+2025-08-18 23:14:11 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:14:11 p. m.
+2025-08-18 23:14:21 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:14:21 p. m.
+2025-08-18 23:26:01 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:26:01 p. m.
+2025-08-18 23:38:11 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:38:11 p. m.
+2025-08-18 23:38:38 [INFO] - Jose Reyes se autentico correctamente el 18/8/2025 11:38:38 p. m.
+2025-08-18 23:41:27 [INFO] - Jose Reyes se autentico correctamente el 18/8/2025 11:41:27 p. m.
+2025-08-18 23:43:26 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:43:26 p. m.
+2025-08-18 23:44:00 [ERROR] - Fallo al crear configuracion el admin:Gregory Martinez no indico un valor correcto para el turno
+2025-08-18 23:44:30 [INFO] - Configuracion creada exitosamente  por el admin:Gregory Martinez
+2025-08-18 23:45:02 [INFO] - configuracion consultada correctamente por admin:Gregory Martinez turno:Vespertino fecha:19/8/2025
+2025-08-18 23:45:22 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:45:22 p. m.
+2025-08-18 23:45:55 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:45:55 p. m.
+2025-08-18 23:46:07 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:46:07 p. m.
+2025-08-18 23:46:17 [INFO] - Gregory Martinez se autentico correctamente el 18/8/2025 11:46:17 p. m.
+2025-08-18 23:51:07 [INFO] - configuracion consultada correctamente por admin:Gregory Martinez turno:Matutino fecha:19/8/2025
+2025-08-18 23:52:10 [INFO] - configuracion consultada correctamente por admin:Gregory Martinez turno:Matutino fecha:18/8/2025
+2025-08-18 23:53:01 [INFO] - configuracion consultada correctamente por admin:Gregory Martinez turno:Matutino fecha:18/8/2025
+2025-08-19 00:02:36 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 12:02:36 a. m.
+2025-08-19 00:02:50 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 12:02:50 a. m.
+2025-08-19 00:07:09 [INFO] - Configuracion creada exitosamente  por el admin:Gregory Martinez
+2025-08-19 00:10:19 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 12:10:19 a. m.
+2025-08-19 00:10:19 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 12:10:19 a. m.
+2025-08-19 00:10:30 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 12:10:30 a. m.
+2025-08-19 00:10:46 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 12:10:46 a. m.
+2025-08-19 00:17:51 [INFO] - configuracion consultada correctamente por admin:Gregory Martinez turno:Matutino fecha:19/8/2025
+2025-08-19 01:15:04 [INFO] - Configuracion creada exitosamente  por el admin:Gregory Martinez
+2025-08-19 01:22:15 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:22:15 a. m.
+2025-08-19 01:22:27 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:22:27 a. m.
+2025-08-19 01:26:39 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:26:39 a. m.
+2025-08-19 01:26:51 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:26:51 a. m.
+2025-08-19 01:29:46 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:29:46 a. m.
+2025-08-19 01:29:57 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:29:57 a. m.
+2025-08-19 01:30:09 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:30:09 a. m.
+2025-08-19 01:31:04 [ERROR] - Fallo a crear configuracion por el admin:Gregory Martinez, no indico la duracion de la cita
+2025-08-19 01:32:31 [ERROR] - Fallo a crear configuracion por el admin:Gregory Martinez, no indico la duracion de la cita
+2025-08-19 01:33:24 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 1:33:24 a. m.
+2025-08-19 01:33:53 [INFO] - Admin 'Gregory Martinez' consultó el log a 19/8/2025 1:33:53 a. m.
+2025-08-19 01:34:52 [INFO] - Configuracion creada exitosamente  por el admin:Gregory Martinez
+2025-08-19 01:36:10 [INFO] - Configuracion creada exitosamente  por el admin:Gregory Martinez
+2025-08-19 01:36:38 [INFO] - Admin 'Gregory Martinez' consultó el log a 19/8/2025 1:36:38 a. m.
+2025-08-19 02:06:00 [INFO] - Configuracion creada exitosamente  por el admin:Gregory Martinez
+2025-08-19 02:06:42 [INFO] - Admin 'Gregory Martinez' consultó el log a 19/8/2025 2:06:42 a. m.
+2025-08-19 02:32:55 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 2:32:55 a. m.
+2025-08-19 02:41:31 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 2:41:31 a. m.
+2025-08-19 02:41:41 [INFO] - Gregory Martinez se autentico correctamente el 19/8/2025 2:41:41 a. m.

@@ -1,0 +1,116 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== Container ===== */
+.container {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ===== Titles ===== */
+h1 {
+    text-align: center;
+    color: #1a3d7c;
+    font-size: 1.6em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* ===== Form ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cce0ff;
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #1a3d7c;
+    outline: none;
+}
+
+/* ===== Turno alineado en una fila ===== */
+.turno-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.turno-container label {
+    min-width: 70px;
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+}
+
+/* ===== Botones ===== */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.button-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a3d7c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-group button:hover {
+    background-color: #3560a3;
+}
+
+/* Mensajes */
+#mensaje {
+    font-weight: 500;
+    color: #d9534f;
+    font-size: 0.9em;
+    text-align: center;
+}

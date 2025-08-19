@@ -573,12 +573,18 @@
           "System.IdentityModel.Tokens.Jwt": "8.13.1"
         },
         "runtime": {
-          "Aplicacion.dll": {}
+          "Aplicacion.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Dominio/1.0.0": {
         "runtime": {
-          "Dominio.dll": {}
+          "Dominio.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Infraestructura/1.0.0": {
@@ -589,7 +595,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
         },
         "runtime": {
-          "Infraestructura.dll": {}
+          "Infraestructura.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

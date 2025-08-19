@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/configuracion.css">
+    <title>Gestión de Configuración - Bookify</title>
+</head>
+<body>
+
+<div class="container" id="adminContainer">
+    <h1>Gestión de Configuración</h1>
+
+    <form id="configForm">
+        <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <div class="form-group turno-container">
+            <label for="turno">Turno:</label>
+            <select id="turno" name="turno">
+                <option value="Matutino">Matutino</option>
+                <option value="Vespertino">Vespertino</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="horaInicio">Desde:</label>
+            <input type="time" id="horaInicio" name="horaInicio">
+        </div>
+
+        <div class="form-group">
+            <label for="horaFin">Hasta:</label>
+            <input type="time" id="horaFin" name="horaFin">
+        </div>
+
+        <div class="form-group">
+            <label for="duracionCitas">Duración (min):</label>
+            <input type="number" id="duracionCitas" name="duracionCitas" placeholder="30">
+        </div>
+
+        <div class="form-group">
+            <label for="cantidadEstaciones">Estaciones:</label>
+            <input type="number" id="cantidadEstaciones" name="cantidadEstaciones" placeholder="5">
+        </div>
+
+        <p id="mensaje"></p>
+
+        <div class="button-group">
+            <button type="button" id="btnCrear">Crear</button>
+            <button type="button" id="btnModificar">Modificar</button>
+            <button type="button" id="btnObtener">Obtener</button>
+        </div>
+    </form>
+</div>
+
+<script src="../JS/CONFIGURACION.js"></script>
+</body>
+</html>
