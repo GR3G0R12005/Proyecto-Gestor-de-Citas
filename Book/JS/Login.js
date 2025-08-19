@@ -16,7 +16,7 @@ async function logearse() {
             body: JSON.stringify({ correo, contraseña })
         });
 
-        const data = await response.json(); // 👈 ahora siempre será JSON
+        const data = await response.json();
 
         if (!response.ok || !data.success) {
             loginMessage.textContent = data.message || "Error en la solicitud";

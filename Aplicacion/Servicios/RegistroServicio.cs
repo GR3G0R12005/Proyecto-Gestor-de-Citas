@@ -13,20 +13,10 @@ namespace Aplicacion.Servicios
             this.repo = repo;
         }
 
-        public string AddUsuario(RegistroUsuarioDTO usuario)
+        public Registro AddUsuario(RegistroUsuarioDTO usuario)
         {
             try
             {
-                if (string.IsNullOrEmpty(usuario.Correo) || !usuario.Correo.Contains("@"))
-                {
-                    LoggerServicio.getInstancia().Error($"Estimado {usuario.Nombre} Intente ingresar un correo válido");
-                }
-
-                if (repo.BuscarId(usuario.Correo) != null)
-                {
-                    LoggerServicio.getInstancia().Error($"Error al registrase {usuario.Nombre} ya existe");
-                }
-
                 var _usuario = new Registro
                 {
                     Nombre = usuario.Nombre,
@@ -40,17 +30,15 @@ namespace Aplicacion.Servicios
                     Rol = false
                 };
 
-                LoggerServicio.getInstancia().Info($"{usuario.Nombre} se registro el {DateTime.Now}");
-                return repo.Registrarse(_usuario);
+                repo.Registrarse(_usuario);
+                return _usuario;
             }
             catch (Exception ex)
             {
-                var inner = ex.InnerException?.Message;
-                var fullMessage = ex.Message + (inner != null ? " | Inner: " + inner : "");
-
-                throw new Exception("No se pudo registrar: " + fullMessage, ex);
+                throw new Exception("No se pudo registrar: " + ex.Message, ex);
             }
         }
+
         
         public LoginUsuarioDTO ValidacionLogin(string correo, string contraseña)
         {
@@ -90,38 +78,3 @@ namespace Aplicacion.Servicios
     }
 }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

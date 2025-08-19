@@ -117,3 +117,33 @@
 2025-08-18 18:45:09 [INFO] - José se autentico correctamente el 18/8/2025 6:45:09 p. m.
 2025-08-18 18:45:09 [INFO] - José se autentico correctamente el 18/8/2025 6:45:09 p. m.
 2025-08-18 18:45:18 [INFO] - José se autentico correctamente el 18/8/2025 6:45:18 p. m.
+2025-08-18 19:50:53 [INFO] - Gregory se registro el 18/8/2025 7:50:53 p. m.
+2025-08-18 19:50:53 [INFO] - Gregory se registro el 18/8/2025 7:50:53 p. m.
+2025-08-18 19:50:53 [INFO] - Gregory se registro el 18/8/2025 7:50:53 p. m.
+2025-08-18 19:50:53 [INFO] - Gregory se registro el 18/8/2025 7:50:53 p. m.
+2025-08-18 19:50:53 [INFO] - Gregory se registro el 18/8/2025 7:50:53 p. m.
+2025-08-18 19:50:54 [INFO] - Gregory se registro el 18/8/2025 7:50:54 p. m.
+2025-08-18 19:51:13 [INFO] - Gregory se registro el 18/8/2025 7:51:13 p. m.
+2025-08-18 19:51:35 [INFO] - Gregory se registro el 18/8/2025 7:51:35 p. m.
+2025-08-18 19:51:47 [ERROR] - Error al registrase Gregory ya existe
+2025-08-18 19:51:47 [INFO] - Gregory se registro el 18/8/2025 7:51:47 p. m.
+2025-08-18 19:52:53 [ERROR] - Error al registrase Gregory ya existe
+2025-08-18 19:52:53 [INFO] - Gregory se registro el 18/8/2025 7:52:53 p. m.
+2025-08-18 19:56:51 [INFO] - Gregory se registro el 18/8/2025 7:56:51 p. m.
+2025-08-18 19:57:56 [INFO] - Gregory se registro el 18/8/2025 7:57:56 p. m.
+2025-08-18 19:58:37 [INFO] - Gregory se registro el 18/8/2025 7:58:37 p. m.
+2025-08-18 20:03:29 [INFO] - Gregory se registro el 18/8/2025 8:03:29 p. m.
+2025-08-18 20:03:29 [INFO] - Gregory se registro el 18/8/2025 8:03:29 p. m.
+2025-08-18 20:03:52 [INFO] - Gregory se registro el 18/8/2025 8:03:52 p. m.
+2025-08-18 20:03:53 [INFO] - Gregory se registro el 18/8/2025 8:03:53 p. m.
+2025-08-18 20:04:14 [INFO] - Gregory se registro el 18/8/2025 8:04:14 p. m.
+2025-08-18 20:14:58 [ERROR] - Error al registrase Gregory ya existe
+2025-08-18 20:14:58 [INFO] - Gregory se registro el 18/8/2025 8:14:58 p. m.
+2025-08-18 20:25:36 [INFO] - Gregory se registro el 18/8/2025 8:25:36 p. m.
+2025-08-18 20:25:36 [INFO] - Gregory se registro el 18/8/2025 8:25:36 p. m.
+2025-08-18 20:34:40 [INFO] - Gregory se registro el 18/8/2025 8:34:40 p. m.
+2025-08-18 20:34:40 [INFO] - Gregory se registro el 18/8/2025 8:34:40 p. m.
+2025-08-18 20:35:14 [INFO] - Gregory se registro el 18/8/2025 8:35:14 p. m.
+2025-08-18 20:35:14 [INFO] - Gregory se registro el 18/8/2025 8:35:14 p. m.
+2025-08-18 22:08:48 [INFO] - Gregory se autentico correctamente el 18/8/2025 10:08:48 p. m.
+2025-08-18 22:08:57 [INFO] - Gregory se autentico correctamente el 18/8/2025 10:08:57 p. m.

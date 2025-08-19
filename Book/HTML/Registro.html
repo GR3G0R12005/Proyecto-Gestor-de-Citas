@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Bookify</title>
+    <link rel="stylesheet" href="../Css/registro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Cuenta en Bookify</h1>
+
+        <form id="registroForm">
+            <h2>Completa tus datos</h2>
+
+            <label for="registroNombre">Nombre:</label>
+            <input type="text" id="registroNombre" name="registroNombre" required>
+
+            <label for="registroEdad">Edad:</label>
+            <input type="number" id="registroEdad" name="registroEdad" min="1" required>
+
+            <label for="registroTelefono">Teléfono:</label>
+            <input type="tel" id="registroTelefono" name="registroTelefono">
+
+            <label for="registroCorreo">Correo:</label>
+            <input type="email" id="registroCorreo" name="registroCorreo" required>
+
+            <label for="registroContraseña">Contraseña:</label>
+            <input type="password" id="registroContraseña" name="registroContraseña" required>
+
+            <label for="registroDia">Fecha de Nacimiento:</label>
+            <div class="fecha-nacimiento">
+                <input type="number" id="registroDia" name="registroDia" placeholder="Día" min="1" max="31" required>
+                <input type="number" id="registroMes" name="registroMes" placeholder="Mes" min="1" max="12" required>
+                <input type="number" id="registroAño" name="registroAño" placeholder="Año" min="1900" max="2100" required>
+            </div>
+
+            <h3>¿Ya tienes cuenta? <a href="login.html">Iniciar Sesión</a></h3>
+            
+            <p id="registroMessage"></p>
+
+            <button type="button" onclick="registrarse()">Registrarse</button>
+        </form>
+
+    </div>
+
+    <script src="../JS/registro.js"></script>
+</body>
+</html>
