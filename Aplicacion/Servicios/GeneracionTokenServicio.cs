@@ -28,21 +28,12 @@ namespace Aplicacion.Servicios
         //Configuracion de json web token para darle seguimiento al usuario
         public string GenerarToken(string nombre, string correo, string id)
         {
-
-
             var jwt = _configuration.GetSection("Jwt").Get<Jwt>();
-
-
-
 
             if (jwt == null)
             {
                 throw new Exception("token invalido");
             }
-
-
-         
-          
 
             var claims = new[]
             {
@@ -53,15 +44,11 @@ namespace Aplicacion.Servicios
                     new Claim("id", id),
                     new Claim("Nombre", nombre),
                     new Claim("Correo", correo),
-                    
-
+                
             };
-
-
 
             var Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key));
             var singing = new SigningCredentials(Key, SecurityAlgorithms.HmacSha256);
-
 
             var token = new JwtSecurityToken(
                 jwt.Issuer,
@@ -71,13 +58,8 @@ namespace Aplicacion.Servicios
                 signingCredentials: singing
                 );
 
-
             return new JwtSecurityTokenHandler().WriteToken(token);
 
         }
-
-
-
-
     }
 }

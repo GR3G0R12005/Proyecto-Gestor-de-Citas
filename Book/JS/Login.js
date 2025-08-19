@@ -16,7 +16,7 @@ async function logearse() {
             body: JSON.stringify({ correo, contraseña })
         });
 
-        const data = await response.json(); // 👈 ahora siempre será JSON
+        const data = await response.json();
 
         if (!response.ok || !data.success) {
             loginMessage.textContent = data.message || "Error en la solicitud";
@@ -24,10 +24,15 @@ async function logearse() {
         } else {
             localStorage.setItem("token", data.token);
 
-            loginMessage.textContent = `Bienvenido ${data.usuario.nombre}`;
+            loginMessage.textContent = `Bienvenido ${data.token}`;
             loginMessage.style.color = "green";
 
+            if (data.usuario.rol == false) {
+                window.location.href = "IndexUsuario.html";
+            }
+            else{
             // window.location.href = "dashboard.html";
+            }
         }
 
     } catch (error) {

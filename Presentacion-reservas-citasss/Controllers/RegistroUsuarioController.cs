@@ -21,26 +21,56 @@ namespace Presentacion_reservas_citasss.Controllers
 
         [AllowAnonymous]
         [HttpPost("Registrarse")]
-        public dynamic RegistroUsuario(RegistroUsuarioDTO usuario)
+        public IActionResult RegistroUsuario([FromBody] RegistroUsuarioDTO usuario)
         {
-
-            var RegistroUsuario = servicio.AddUsuario(usuario);
-
-            if (RegistroUsuario == null)
+            try
             {
-                return BadRequest(new { message = "No se pudo registrar el usuario (puede que ya exista)" });
+                if (string.IsNullOrWhiteSpace(usuario.Nombre) ||
+                    string.IsNullOrWhiteSpace(usuario.Correo) ||
+                    string.IsNullOrWhiteSpace(usuario.Contraseña) ||
+                    usuario.Edad <= 0 ||
+                    usuario.Dia <= 0 || usuario.Mes <= 0 || usuario.Año <= 0)
+                {
+                    return BadRequest(new
+                    {
+                        success = false,
+                        message = "Faltan campos obligatorios o contienen valores inválidos."
+                    });
+                }
+                var registroUsuario = servicio.AddUsuario(usuario);
+
+                if (registroUsuario == null)
+                {
+                    return BadRequest(new
+                    {
+                        success = false,
+                        message = "No se pudo registrar el usuario. Verifica los datos."
+                    });
+                }
+
+                string id = registroUsuario.Id.ToString();
+                string _token = token.GenerarToken(registroUsuario.Nombre!, registroUsuario.Correo!, id);
+
+                return Ok(new
+                {
+                    success = true,
+                    message = "Usuario registrado correctamente",
+                    token = _token,
+                    usuario = registroUsuario
+                });
             }
-
-            string id = Convert.ToString(usuario.Id);
-
-            string _token = token.GenerarToken(usuario.Nombre, usuario.Correo, id);
-
-            return Ok(new
+            catch (Exception ex)
             {
-                token = _token,
-                usuario = RegistroUsuario
-            });
+                return StatusCode(500, new
+                {
+                    success = false,
+                    message = "Error interno del servidor",
+                    error = ex.Message
+                });
+            }
         }
+
+
         [AllowAnonymous]
         [HttpPost("Logearse")]
         public IActionResult LoginUsuario([FromBody] LoginDTO login)
