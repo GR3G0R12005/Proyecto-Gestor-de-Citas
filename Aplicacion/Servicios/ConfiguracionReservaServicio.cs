@@ -257,5 +257,15 @@ namespace Aplicacion.Servicios
             }
         }
 
+        public async Task<List<ConfiguracionDTO>> obtenerTodasAsync()
+        {
+            var configs = await repo.obtenerTodasAsync();
+            return configs.Select(c => new ConfiguracionDTO {
+                Fecha = c.Fecha,
+                Turno = c.Turno,
+                HoraInicio = c.HoraInicio.ToString("HH:mm"),
+                HoraFin = c.HoraFin.ToString("HH:mm")
+            }).ToList();
+        }
     }
 }

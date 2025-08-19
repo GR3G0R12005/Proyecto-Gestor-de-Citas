@@ -86,11 +86,11 @@ namespace Presentacion_reservas_citasss.Controllers
     
         [HttpGet("Obtener-todas")]
         [AllowAnonymous] 
-        public ActionResult<List<ConfiguracionDTO>> GetTodas()
+        public async Task<ActionResult<List<ConfiguracionDTO>>> GetTodas()
         {
             try
             {
-                var configs = servicio.obtenerTodas();
+                var configs = await servicio.obtenerTodasAsync();
                 return Ok(configs);
             }
             catch (Exception ex)
@@ -98,5 +98,6 @@ namespace Presentacion_reservas_citasss.Controllers
                 return BadRequest("Hubo un error al obtener todas las configuraciones: " + ex.Message);
             }
         }
+
     }
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reservar Cita</h1>
+    <h2 id="fecha-turno"></h2>
+
+    <form id="reservaForm">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="hora">Hora:</label>
+        <select id="hora" name="hora" required>
+            <!-- Se llenará según turno -->
+        </select>
+
+        <button type="submit">Reservar</button>
+    </form>
+
+    <script>
+        // Obtener parámetros de URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const fecha = urlParams.get('fecha');
+        const turno = urlParams.get('turno');
+
+        const fechaTurnoH2 = document.getElementById('fecha-turno');
+        const horaSelect = document.getElementById('hora');
+        const form = document.getElementById('reservaForm');
+
+        fechaTurnoH2.textContent = `Reservando para ${fecha} (${turno})`;
+
+        // Simulamos la configuración de slots
+        const configuracionSlots = {
+            "2025-08-19": {
+                matutino: ["08:00", "09:00", "10:00", "11:00", "12:00"],
+                vespertino: ["13:00", "14:00", "15:00", "16:00", "17:00"]
+            },
+            "2025-08-20": {
+                matutino: ["08:30", "09:30", "10:30", "11:30"],
+                vespertino: ["13:30", "14:30", "15:30", "16:30"]
+            }
+        };
+
+        // Obtener los slots disponibles del día y turno
+        const slotsDisponibles = configuracionSlots[fecha]?.[turno.toLowerCase()] || [];
+
+        if (slotsDisponibles.length === 0) {
+            const option = document.createElement('option');
+            option.value = "";
+            option.textContent = "No hay slots disponibles";
+            horaSelect.appendChild(option);
+        } else {
+            slotsDisponibles.forEach(h => {
+                const option = document.createElement('option');
+                option.value = h;
+                option.textContent = h;
+                horaSelect.appendChild(option);
+            });
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const correo = document.getElementById('correo').value;
+            const hora = horaSelect.value;
+
+            if (!hora) {
+                alert("No hay slots disponibles para reservar.");
+                return;
+            }
+
+            // Mostrar confirmación en pantalla
+            alert(`Cita reservada para ${correo} el ${fecha} a las ${hora} (${turno}).`);
+
+            // Aquí podrías enviar los datos a tu API para guardar la reserva
+        });
+    </script>
+</body>
+</html>

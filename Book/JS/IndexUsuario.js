@@ -6,34 +6,8 @@ const prevMonthBtn = document.getElementById("prevMonth");
 const nextMonthBtn = document.getElementById("nextMonth");
 
 let currentDate = new Date();
-let configs = []; // Guardaremos los datos de la API
 
-// ----------------------
-// Crear calendario (solo las celdas una vez)
-// ----------------------
-function createCalendarCells() {
-  if (calendarBody.childElementCount > 0) return; // Ya creado
-
-  for (let i = 0; i < 42; i++) { // 6 semanas x 7 días
-    const cell = document.createElement("div");
-    cell.classList.add("day");
-
-    const dayNumber = document.createElement("div");
-    dayNumber.classList.add("day-number");
-    cell.appendChild(dayNumber);
-
-    const tagsContainer = document.createElement("div");
-    tagsContainer.classList.add("tags-container");
-    cell.appendChild(tagsContainer);
-
-    calendarBody.appendChild(cell);
-  }
-}
-
-// ----------------------
-// Renderizar calendario (población de datos)
-// ----------------------
-function renderCalendar() {
+async function renderCalendar() {
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
 
@@ -44,12 +18,30 @@ function renderCalendar() {
   monthYear.textContent = `${monthNames[month]} ${year}`;
 
   const firstDay = new Date(year, month, 1).getDay();
-  const startingDay = (firstDay === 0 ? 6 : firstDay - 1); // lunes = 0
+  const startingDay = (firstDay === 0 ? 6 : firstDay - 1); 
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const daysInPrevMonth = new Date(year, month, 0).getDate();
 
-  const cells = calendarBody.querySelectorAll(".day");
+  const configs = await fetchConfigs();
 
+  if (calendarBody.childElementCount === 0) {
+    for (let i = 0; i < 42; i++) {
+      const cell = document.createElement("div");
+      cell.classList.add("day");
+
+      const dayNumber = document.createElement("div");
+      dayNumber.classList.add("day-number");
+      cell.appendChild(dayNumber);
+
+      const tagsContainer = document.createElement("div");
+      tagsContainer.classList.add("tags-container");
+      cell.appendChild(tagsContainer);
+
+      calendarBody.appendChild(cell);
+    }
+  }
+
+  const cells = calendarBody.querySelectorAll(".day");
   cells.forEach((cell, i) => {
     const dayNum = cell.querySelector(".day-number");
     const tagsContainer = cell.querySelector(".tags-container");
@@ -61,7 +53,6 @@ function renderCalendar() {
     let cellMonth = month;
     let cellYear = year;
 
-    // Mes anterior
     if (i < startingDay) {
       day = daysInPrevMonth - (startingDay - i - 1);
       cellMonth = month - 1;
@@ -71,7 +62,7 @@ function renderCalendar() {
       }
       cell.classList.add("inactive-day");
     }
-    // Mes siguiente
+
     else if (i >= startingDay + daysInMonth) {
       day = i - (startingDay + daysInMonth) + 1;
       cellMonth = month + 1;
@@ -81,14 +72,15 @@ function renderCalendar() {
       }
       cell.classList.add("inactive-day");
     }
-    // Mes actual
+
     else {
       day = i - startingDay + 1;
     }
 
     dayNum.textContent = day;
 
-    // Marcar hoy
+    const dateStr = `${cellYear}-${String(cellMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
     const today = new Date();
     if (
       day === today.getDate() &&
@@ -98,18 +90,17 @@ function renderCalendar() {
       cell.classList.add("today");
     }
 
-    // Construir fecha YYYY-MM-DD
-    const dateStr = `${cellYear}-${String(cellMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    if (configs.length === 0) return; 
 
-    // Pintar turnos si existen configs
     const dayConfigs = configs.filter(c => {
-      const fechaSolo = c.fecha.split('T')[0]; // YYYY-MM-DD
+      const fechaSolo = c.fecha.split('T')[0];
       return fechaSolo === dateStr;
     });
 
     dayConfigs.forEach(config => {
-      const tag = document.createElement("span");
+      const tag = document.createElement("a");
       tag.classList.add("tag");
+
       if (config.turno.toLowerCase() === "matutino") {
         tag.classList.add("tag-matutino");
         tag.textContent = "Matutino";
@@ -117,33 +108,45 @@ function renderCalendar() {
         tag.classList.add("tag-vespertino");
         tag.textContent = "Vespertino";
       }
+
+      // 🔹 Redirigir con parámetros dinámicos
+      tag.href = `reservar.html?fecha=${config.fecha.split("T")[0]}&turno=${config.turno}`;
+
       tagsContainer.appendChild(tag);
     });
   });
 }
 
-// ----------------------
-// Obtener configuraciones desde la API
-// ----------------------
 async function fetchConfigs() {
   try {
     const response = await fetch(API_URL);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    if (!response.ok) {
+      console.error("No se pudo obtener la API, status:", response.status);
+      mostrarErrorEnCalendario("No se pudo cargar la agenda desde la API");
+      return [];
+    }
+
     const data = await response.json();
-    configs = data; // Guardar globalmente
-    console.log("Datos del backend:", configs);
+    console.log("Datos del backend:", data);
+
+    return data.map(item => ({
+      fecha: item.fecha,
+      turno: item.turno,
+      horaInicio: item.horaInicio,
+      horaFin: item.horaFin
+    }));
   } catch (error) {
-    console.error("No se pudo cargar la API:", error);
-    // Puedes mostrar un mensaje de error en la UI si quieres
-    configs = []; // Evitar que sea undefined
-  } finally {
-    renderCalendar(); // Renderizar siempre, aunque falle la API
+    console.error("Error en fetchConfigs:", error);
+    mostrarErrorEnCalendario("No se pudo conectar con la API");
+    return [];
   }
 }
 
-// ----------------------
-// Navegar entre meses
-// ----------------------
+function mostrarErrorEnCalendario(mensaje) {
+  calendarBody.innerHTML = `<div class="error-fetch">${mensaje}</div>`;
+}
+
 prevMonthBtn.addEventListener("click", () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
   renderCalendar();
@@ -154,6 +157,4 @@ nextMonthBtn.addEventListener("click", () => {
   renderCalendar();
 });
 
-// Inicializar
-createCalendarCells();
-fetchConfigs(); // Solo aquí hacemos el fetch
+renderCalendar();

@@ -121,9 +121,19 @@ header h1 {
 
 .tag-matutino {
   background: #1a73e8; 
+  text-decoration: none;
 }
 
 .tag-vespertino {
   background: #fbbc05; 
   color: #333;
+  text-decoration: none;
+}
+
+.error-fetch {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: red;
+  padding: 1rem;
+  font-weight: bold;
 }

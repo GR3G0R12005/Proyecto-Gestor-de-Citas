@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Presentacion-reservas-citasss")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d7cbef157a0d54522f56db5c4caa92541b9c0b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f86ff9e265800ef2703a0a044bfdc032467939bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Presentacion-reservas-citasss")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Presentacion-reservas-citasss")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

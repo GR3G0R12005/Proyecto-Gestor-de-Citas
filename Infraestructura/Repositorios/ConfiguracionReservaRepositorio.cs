@@ -33,6 +33,11 @@ namespace Infraestructura.Repositorios
             }
         }
 
+        public async Task<List<ConfiguracionReserva>> obtenerTodasAsync()
+        {
+            return await context.ConfiguracionReservas.ToListAsync();
+        }
+
         public string actualizarConfiguracion(ConfiguracionReserva reserva)
         {
             try

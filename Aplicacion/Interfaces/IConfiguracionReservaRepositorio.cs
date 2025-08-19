@@ -8,5 +8,6 @@ namespace Aplicacion.Interfaces
         string actualizarConfiguracion(ConfiguracionReserva reserva);
         ConfiguracionReserva obtenerConfiguracion(DateOnly fecha, string turno);
         List<ConfiguracionReserva> obtenerTodas();
+        Task<List<ConfiguracionReserva>> obtenerTodasAsync();
     }
 }
