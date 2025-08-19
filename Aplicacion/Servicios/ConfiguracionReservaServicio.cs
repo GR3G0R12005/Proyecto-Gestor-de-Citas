@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using Aplicacion.DTOs;
 using Aplicacion.Interfaces;
 using Infraestructura.Modelos;
-using Microsoft.Extensions.Configuration;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Aplicacion.Servicios
 {
@@ -32,7 +26,7 @@ namespace Aplicacion.Servicios
 
         public string crearConfiguracion(ConfiguracionDTO configuracion, string admin)
         {
-                  
+
             try
             {
                 if (configuracion.Fecha < DateOnly.FromDateTime(DateTime.Now))
@@ -99,10 +93,6 @@ namespace Aplicacion.Servicios
                     }
                 }
 
-
-              
-
-
                 var Newconfiguracion = new ConfiguracionReserva
                 {
                     Fecha = configuracion.Fecha,
@@ -127,15 +117,11 @@ namespace Aplicacion.Servicios
             }
         }
 
-
-
-
-
         public string actualizarConfiguracion(ConfiguracionDTO config, string nombre)
         {
             try
             {
-               
+
                 if (config.Fecha < DateOnly.FromDateTime(DateTime.Now))
                     throw new Exception("La fecha no puede ser menor al día actual");
 
@@ -151,7 +137,7 @@ namespace Aplicacion.Servicios
                     throw new Exception("La duración de las citas debe ser mayor que 0");
                 }
 
-              
+
                 var horaInicio = TimeOnly.ParseExact(config.HoraInicio, "HH:mm", CultureInfo.InvariantCulture);
                 var horaFin = TimeOnly.ParseExact(config.HoraFin, "HH:mm", CultureInfo.InvariantCulture);
 
@@ -183,12 +169,12 @@ namespace Aplicacion.Servicios
                     throw new Exception($"El horario para el turno {config.Turno} debe estar dentro del rango permitido.");
                 }
 
-              
+
                 var configExistente = repo.obtenerConfiguracion(config.Fecha, config.Turno);
                 if (configExistente == null)
                     throw new Exception("No se encontró configuración para la fecha y turno seleccionados");
 
-               
+
                 configExistente.HoraInicio = horaInicio;
                 configExistente.HoraFin = horaFin;
                 configExistente.DuracionCitas = config.DuracionCitas;
@@ -203,11 +189,6 @@ namespace Aplicacion.Servicios
                 throw new Exception("Hubo un error al modificar la configuración: " + ex.Message);
             }
         }
-
-
-
-
-
 
         public ConfiguracionDTO obtenerConfiguracion(DateOnly fecha, string turno, string nombre)
         {
@@ -228,17 +209,17 @@ namespace Aplicacion.Servicios
                 }
 
 
-                var config = repo.obtenerConfiguracion(fecha,turno);
-                 
+                var config = repo.obtenerConfiguracion(fecha, turno);
+
 
 
                 LoggerServicio.getInstancia().Info($"configuracion consultada correctamente por admin:{nombre} turno:{turno} fecha:{fecha}");
                 return new ConfiguracionDTO
-                {   
+                {
                     Fecha = config.Fecha,
                     Turno = config.Turno,
-                    HoraInicio = config.HoraInicio.ToString("HH:mm"), 
-                    HoraFin = config.HoraFin.ToString("HH:mm"),   
+                    HoraInicio = config.HoraInicio.ToString("HH:mm"),
+                    HoraFin = config.HoraFin.ToString("HH:mm"),
                     DuracionCitas = config.DuracionCitas,
                     CantidadEstaciones = config.CantidadEstaciones
                 };
@@ -249,26 +230,32 @@ namespace Aplicacion.Servicios
 
                 throw new Exception("Hubo un error al consultar la configuracion " + ex.Message);
 
-
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
+        
+        public List<ConfiguracionDTO> obtenerTodas()
+        {
+            try
+            {
+                var configs = repo.obtenerTodas();
+
+                LoggerServicio.getInstancia().Info("Todas las configuraciones fueron consultadas");
+
+                return configs.Select(c => new ConfiguracionDTO
+                {
+                    Fecha = c.Fecha,
+                    Turno = c.Turno,
+                    HoraInicio = c.HoraInicio.ToString("HH:mm"),
+                    HoraFin = c.HoraFin.ToString("HH:mm"),
+                    DuracionCitas = c.DuracionCitas,
+                    CantidadEstaciones = c.CantidadEstaciones
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Hubo un error al consultar todas las configuraciones: " + ex.Message);
+            }
+        }
+
     }
 }

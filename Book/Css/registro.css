@@ -1,0 +1,124 @@
+/* Reset básico y tipografía */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor general */
+.container {
+    text-align: center;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 620px;
+    margin: 0 auto;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #1a3d7c;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #1a3d7c;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Labels e inputs */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cce0ff;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #1a3d7c;
+    outline: none;
+}
+
+/* Fecha de nacimiento en fila */
+.fecha-nacimiento {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.fecha-nacimiento input {
+    flex: 1;
+    text-align: center;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a3d7c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 26px;
+}
+
+button:hover {
+    background-color: #3560a3;
+}
+
+/* Mensajes */
+#registroMessage {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #d9534f; 
+    font-size: 0.95em;
+}
+
+/* Enlace */
+h3 {
+    margin-top: 10px;
+    color: #333;
+    font-weight: 400;
+}
+
+h3 a {
+    color: #1a3d7c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+}
