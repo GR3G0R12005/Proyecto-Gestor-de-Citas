@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Infraestructura.Modelos;
+﻿using Infraestructura.Modelos;
 
 namespace Aplicacion.Interfaces
 {
@@ -11,8 +6,7 @@ namespace Aplicacion.Interfaces
     {
         string crearConfiguracion(ConfiguracionReserva configuracion);
         string actualizarConfiguracion(ConfiguracionReserva reserva);
-
         ConfiguracionReserva obtenerConfiguracion(DateOnly fecha, string turno);
-
+        List<ConfiguracionReserva> obtenerTodas();
     }
 }

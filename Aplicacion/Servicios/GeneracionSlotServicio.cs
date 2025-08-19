@@ -63,13 +63,9 @@ namespace Aplicacion.Servicios
             catch (Exception ex)
             {
 
-                throw new Exception("Hubo un error al generalse los slots " + ex.Message);
-
+                throw new Exception("Hubo un error al generarse los slots " + ex.Message);
 
             }
-
-
-
         }
     }
 }

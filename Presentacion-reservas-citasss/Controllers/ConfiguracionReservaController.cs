@@ -1,10 +1,7 @@
-﻿using System.Globalization;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Aplicacion.DTOs;
 using Aplicacion.Servicios;
-using Infraestructura.Modelos;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentacion_reservas_citasss.Controllers
@@ -14,23 +11,14 @@ namespace Presentacion_reservas_citasss.Controllers
     [ApiController]
     public class ConfiguracionReservaController : ControllerBase
     {
-
-
-
         private readonly ConfiguracionReservaServicio servicio;
-
-
-
 
         public ConfiguracionReservaController(ConfiguracionReservaServicio servicio)
         {
-        
-            this.servicio = servicio;   
-        
-        
+
+            this.servicio = servicio;
+
         }
-
-
 
         [HttpPost("Crear-configuracion")]
         public string CrearConfiguracion([FromBody] ConfiguracionDTO configuracion)
@@ -41,9 +29,6 @@ namespace Presentacion_reservas_citasss.Controllers
                 if (string.IsNullOrEmpty(nombre))
                     throw new Exception("Error al encontral el nombre del admin");
 
-
-
-              
                 return servicio.crearConfiguracion(configuracion, nombre);
 
             }
@@ -56,8 +41,6 @@ namespace Presentacion_reservas_citasss.Controllers
 
         }
 
-
-
         [HttpPut("Modificar-configuracion")]
         public string ModificarConfiguracion([FromBody] ConfiguracionDTO config)
         {
@@ -68,7 +51,7 @@ namespace Presentacion_reservas_citasss.Controllers
                     throw new Exception("Error al encontral el nombre del admin");
 
 
-                return servicio.actualizarConfiguracion(config,nombre);
+                return servicio.actualizarConfiguracion(config, nombre);
             }
             catch (Exception ex)
             {
@@ -76,9 +59,7 @@ namespace Presentacion_reservas_citasss.Controllers
                 return "Hubo un error al modificar la configuracion " + ex.Message;
 
             }
-
         }
-
 
 
         [HttpGet("Obtener-configuracion")]
@@ -91,9 +72,7 @@ namespace Presentacion_reservas_citasss.Controllers
                 var nombre = User.FindFirstValue("Nombre");
                 if (string.IsNullOrEmpty(nombre))
                     throw new Exception("Error al encontral el nombre del admin");
-
-
-                var config = servicio.obtenerConfiguracion(fecha,turno,nombre); 
+                var config = servicio.obtenerConfiguracion(fecha, turno, nombre);
                 return Ok(config);
 
             }
@@ -102,17 +81,22 @@ namespace Presentacion_reservas_citasss.Controllers
 
                 return BadRequest(ex.Message);
 
-
             }
-
         }
-
-
-
-
-
-
-
-
+    
+        [HttpGet("Obtener-todas")]
+        [AllowAnonymous] 
+        public ActionResult<List<ConfiguracionDTO>> GetTodas()
+        {
+            try
+            {
+                var configs = servicio.obtenerTodas();
+                return Ok(configs);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Hubo un error al obtener todas las configuraciones: " + ex.Message);
+            }
+        }
     }
 }
