@@ -17,15 +17,10 @@ namespace Presentacion_reservas_citasss
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-               
-                
-            
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
 
-            //configurar Json web token para que funcione en swagger
+            // Swagger / OpenAPI
+            builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -39,36 +34,30 @@ namespace Presentacion_reservas_citasss
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
-         {
-         {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
-        });
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+            });
 
-            }
-            );
-
-
-
-            // Configuracion de la conexionDB y dbcontext
+            // Conexion DB
             var conn = builder.Configuration.GetConnectionString("Appconnection");
             builder.Services.AddDbContext<ReservaCitasDbContext>(x => x.UseSqlServer(conn));
 
-
-
-            //Cofiguraciones mis servicios de inyecciones de dependecias
+            // Inyeccion de dependencias
             builder.Services.AddScoped<IRegistroRepositorio, RegistroRepositorio>();
             builder.Services.AddScoped<IRegistroServicio, RegistroServicio>();
             builder.Services.AddScoped<IConfiguracionReservaServicio, ConfiguracionReservaServicio>();
-            builder.Services.AddScoped<IConfiguracionReservaRepositorio,ConfiguracionReservaRepositorio>();
+            builder.Services.AddScoped<IConfiguracionReservaRepositorio, ConfiguracionReservaRepositorio>();
             builder.Services.AddScoped<IGeneracionSlotServicio, GeneracionSlotServicio>();
             builder.Services.AddScoped<IGeneracionSlotsRepositorio, GeneracionSlotRepositorio>();
             builder.Services.AddScoped<IEstacionServicio, EstacionServicio>();
@@ -88,55 +77,42 @@ namespace Presentacion_reservas_citasss
             builder.Services.AddScoped<EstacionServicio>();
             builder.Services.AddScoped<EstacionRepositorio>();
 
-
-
-
-
-
-            builder.Services.AddSwaggerGen();
-
-
-            // Configuracion del jwt
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-            {
-
-                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+            // JWT Authentication
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
                 {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                    ValidAudience = builder.Configuration["Jwt:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
-
-
-                };
-
-
-                options.Events = new JwtBearerEvents
-                {
-                    OnAuthenticationFailed = context =>
+                    options.TokenValidationParameters = new TokenValidationParameters
                     {
-                        var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Program>>();
-                        logger.LogError(context.Exception, "Token inv�lido");
-                        return Task.CompletedTask;
-                    }
-                };
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
+                    };
 
-            });
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnAuthenticationFailed = context =>
+                        {
+                            var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Program>>();
+                            logger.LogError(context.Exception, "Token invalido");
+                            return Task.CompletedTask;
+                        }
+                    };
+                });
 
-
-           builder.Services.AddCors(options =>
+            // ✅ CORS habilitado para desarrollo (permite cualquier origen)
+            builder.Services.AddCors(options =>
             {
                 options.AddDefaultPolicy(policy =>
                 {
-                    policy.WithOrigins("http://127.0.0.1:5500")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
                 });
             });
-
 
             var app = builder.Build();
 
@@ -146,11 +122,10 @@ namespace Presentacion_reservas_citasss
                 app.UseSwaggerUI();
             }
 
-            app.UseCors();
+            app.UseCors(); // debe ir antes de Authentication/Authorization
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

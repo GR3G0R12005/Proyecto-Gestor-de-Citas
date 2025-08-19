@@ -31,20 +31,25 @@ namespace Presentacion_reservas_citasss.Controllers
                     usuario.Edad <= 0 ||
                     usuario.Dia <= 0 || usuario.Mes <= 0 || usuario.Año <= 0)
                 {
-                    return BadRequest(new
+                    return Ok(new
                     {
                         success = false,
-                        message = "Faltan campos obligatorios o contienen valores inválidos."
+                        message = "Faltan campos obligatorios o contienen valores inválidos.",
+                        usuario = (object)null,
+                        token = ""
                     });
                 }
+
                 var registroUsuario = servicio.AddUsuario(usuario);
 
                 if (registroUsuario == null)
                 {
-                    return BadRequest(new
+                    return Ok(new
                     {
                         success = false,
-                        message = "No se pudo registrar el usuario. Verifica los datos."
+                        message = "No se pudo registrar el usuario. Verifica los datos.",
+                        usuario = (object)null,
+                        token = ""
                     });
                 }
 
@@ -56,20 +61,21 @@ namespace Presentacion_reservas_citasss.Controllers
                     success = true,
                     message = "Usuario registrado correctamente",
                     token = _token,
-                    usuario = registroUsuario
+                    usuario = new { rol = registroUsuario.Rol, nombre = registroUsuario.Nombre }
                 });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new
+                return Ok(new
                 {
                     success = false,
                     message = "Error interno del servidor",
-                    error = ex.Message
+                    error = ex.Message,
+                    usuario = (object)null,
+                    token = ""
                 });
             }
         }
-
 
         [AllowAnonymous]
         [HttpPost("Logearse")]
@@ -81,11 +87,12 @@ namespace Presentacion_reservas_citasss.Controllers
 
                 if (usuariodto == null)
                 {
-                    return BadRequest(new
+                    return Ok(new
                     {
                         success = false,
-                        message = "Error en credenciales, probablemente incorrectas",
-                        result = ""
+                        message = "Usuario o contraseña incorrectos",
+                        usuario = (object)null,
+                        token = ""
                     });
                 }
 
@@ -96,16 +103,18 @@ namespace Presentacion_reservas_citasss.Controllers
                 {
                     success = true,
                     token = tokenString,
-                    usuario = usuariodto
+                    usuario = new { rol = usuariodto.Rol, nombre = usuariodto.Nombre }
                 });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new
+                return Ok(new
                 {
                     success = false,
                     message = "Error interno del servidor",
-                    error = ex.Message
+                    error = ex.Message,
+                    usuario = (object)null,
+                    token = ""
                 });
             }
         }

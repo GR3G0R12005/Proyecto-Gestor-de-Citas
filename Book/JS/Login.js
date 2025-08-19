@@ -18,21 +18,20 @@ async function logearse() {
 
         const data = await response.json();
 
-        if (!response.ok || !data.success) {
+        if (!data.success) {
             loginMessage.textContent = data.message || "Error en la solicitud";
             loginMessage.style.color = "red";
+            return;
+        }
+
+        localStorage.setItem("token", data.token);
+        loginMessage.textContent = `Bienvenido ${data.usuario.nombre}`;
+        loginMessage.style.color = "green";
+
+        if (data.usuario.rol === false) {
+            window.location.href = "IndexUsuario.html"; 
         } else {
-            localStorage.setItem("token", data.token);
-
-            loginMessage.textContent = `Bienvenido ${data.token}`;
-            loginMessage.style.color = "green";
-
-            if (data.usuario.rol == false) {
-                window.location.href = "IndexUsuario.html";
-            }
-            else{
-            // window.location.href = "dashboard.html";
-            }
+            window.location.href = "Configuracion.html"; 
         }
 
     } catch (error) {
@@ -41,4 +40,3 @@ async function logearse() {
         loginMessage.style.color = "red";
     }
 }
-

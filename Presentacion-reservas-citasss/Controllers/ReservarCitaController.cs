@@ -1,11 +1,8 @@
 ﻿using Aplicacion.DTOs;
-using Infraestructura.Modelos;
-using System.Globalization;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Aplicacion.Servicios;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Presentacion_reservas_citasss.Controllers
 {
@@ -14,39 +11,24 @@ namespace Presentacion_reservas_citasss.Controllers
     [ApiController]
     public class ReservarCitaController : ControllerBase
     {
-
-
         private readonly ReservaCitasServicio servicio;
-
-
 
         public ReservarCitaController(ReservaCitasServicio servicio)
         {
             this.servicio = servicio;
+        }
 
-        
-       }
-
-
-        [HttpPost("Registra-Reserva")]
-        public async Task<IActionResult> ReservarCita([FromBody] ReservaCitasDTO dTO)
+        // 📌 Registrar una nueva reserva
+        [HttpPost("Registrar-Reserva")]
+        public async Task<IActionResult> ReservarCita([FromBody] ReservaCitasDTO dto)
         {
             try
             {
-                var correo = User.FindFirstValue("Correo");
-                if(correo == null)
-                    throw new Exception("Correo no encontrado");
+                var correo = User.FindFirstValue("Correo") ?? throw new Exception("Correo no encontrado");
+                var nombre = User.FindFirstValue("Nombre") ?? throw new Exception("Nombre no encontrado");
+                int idUsuario = int.Parse(User.FindFirstValue("id") ?? throw new Exception("Usuario no autenticado"));
 
-
-                var nombre = User.FindFirstValue("Nombre");
-                  if(nombre == null)
-                    throw new Exception("Nombre no encontrado");
-
-                int idUsuario = int.Parse(User.FindFirstValue("id")!);
-                    if(idUsuario <=0)
-                    throw new Exception("Usuario no autenticado");
-
-                var resultado = await servicio.ReservarCita(correo, nombre, idUsuario, dTO);
+                var resultado = await servicio.ReservarCita(correo, nombre, idUsuario, dto);
                 return Ok(resultado);
             }
             catch (Exception ex)
@@ -55,23 +37,17 @@ namespace Presentacion_reservas_citasss.Controllers
             }
         }
 
-
-
-
-
-        [HttpGet("Ver-mi-Reserva")]
-        public IActionResult VerReserva()
+     
+        [HttpGet("Ver-mi-Reserva-Activa")]
+        public IActionResult VerReservaActiva()
         {
             try
             {
                 int idUsuario = int.Parse(User.FindFirstValue("id") ?? throw new Exception("Usuario no autenticado"));
                 string nombre = User.FindFirstValue("Nombre") ?? throw new Exception("Nombre no encontrado");
 
-                var cita = servicio.GetReservaCita(nombre, idUsuario);
-                if (cita == null)
-                    return NotFound("No tiene reservas activas");
-
-                return Ok(cita);
+                var reserva = servicio.GetReservaCita(nombre, idUsuario);
+                return Ok(reserva);
             }
             catch (Exception ex)
             {
@@ -79,7 +55,22 @@ namespace Presentacion_reservas_citasss.Controllers
             }
         }
 
+        // 📌 Ver TODAS mis reservas
+        [HttpGet("Ver-mis-Reservas")]
+        public IActionResult VerReservas()
+        {
+            try
+            {
+                int idUsuario = int.Parse(User.FindFirstValue("id") ?? throw new Exception("Usuario no autenticado"));
+                string nombre = User.FindFirstValue("Nombre") ?? throw new Exception("Nombre no encontrado");
 
-
+                var reservas = servicio.GetReservasUsuario(idUsuario, nombre);
+                return Ok(reservas);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
